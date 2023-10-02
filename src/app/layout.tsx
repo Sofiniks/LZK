@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Merriweather_Sans } from 'next/font/google';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import PageLayout from './components/layouts/PageLayout';
 
 const merriweather_sans = Merriweather_Sans({
   subsets: ['latin', 'cyrillic-ext'],
@@ -22,10 +23,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={merriweather_sans.className}>
-        <Header/>
-        {children}
-        <Footer/>
-        </body>
+        <PageLayout>
+          <Header />
+          {children}
+          <Footer />
+        </PageLayout>
+      </body>
     </html>
   );
 }
