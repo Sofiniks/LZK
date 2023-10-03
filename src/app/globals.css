@@ -64,8 +64,8 @@ a:active {
 }
 
 body {
-  background-color: #e5e5e5;
-  color: #282d33;
+  background-color: #11304d;
+  color: #ffffff;
   font-weight: normal;
   font-size: 16px;
   margin: 0;
@@ -84,6 +84,10 @@ textarea {
 
 input {
   font-family: var(--font-merriweather_sans);
+}
+h1 {
+  font-size: 64px;
+  font-style: italic;
 }
 /* :root {
   --max-width: 1100px;

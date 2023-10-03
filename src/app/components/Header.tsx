@@ -13,6 +13,8 @@ const StyledHeader = styled.header`
   );
   padding: 25px 0;
   position: fixed;
+  width: 100%;
+  z-index: 10;
 `;
 const StyledContainer = styled(ContainerLayout)`
   display: flex;
@@ -35,7 +37,7 @@ const NavItem = styled.li`
   &::after {
     content: '';
     background-color: #fff;
-    width: 42px;
+    width: 50%;
     height: 1px;
     display: block;
     margin-top: 5px;
