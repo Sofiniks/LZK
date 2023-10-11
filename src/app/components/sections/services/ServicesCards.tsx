@@ -28,7 +28,6 @@ const data: ServiceCardsData[] = [
 ];
 
 const SectionWrapper = styled.div`
-  min-height: 80vh;
   margin-bottom: 70px;
 `;
 const HeadingWrapper = styled.div`

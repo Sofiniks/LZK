@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import ContainerLayout from '../../layouts/ContainerLayout';
 
 const StyledSection = styled.section`
-  height: 70vh;
   margin-bottom: 60px;
+  height: 700px;
 `;
 
 const StyledBackground = styled.div<{ $url: string }>`

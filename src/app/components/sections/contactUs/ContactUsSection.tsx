@@ -6,7 +6,6 @@ import LocationIcon from '../../icons/LocationIcon';
 import EmailIcon from '../../icons/EmailIcon';
 
 const StyledSection = styled.section`
-  min-height: 80vh;
   margin-bottom: 120px;
 `;
 const StyledContainer = styled(ContainerLayout)`
