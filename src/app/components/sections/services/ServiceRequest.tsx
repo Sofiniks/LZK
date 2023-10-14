@@ -1,6 +1,8 @@
 'use client';
 import styled from 'styled-components';
 import ContainerLayout from '../../layouts/ContainerLayout';
+import { DesktopContainer, TabletContainer, device } from '@/theme/breakpoints';
+import ServiceRequestMobile from './ServiceRequestMobile';
 
 const SectionWrapper = styled.div`
   margin-bottom: 110px;
@@ -13,10 +15,17 @@ const HeadingWrapper = styled.div`
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   margin-bottom: 70px;
+  @media ${device.md} {
+    margin-bottom: 30px;
+    padding: 40px 0;
+  }
   h2 {
     text-align: center;
     font-size: 48px;
     text-transform: uppercase;
+    @media ${device.sm} {
+      font-size: 32px;
+    }
   }
 `;
 
@@ -45,6 +54,9 @@ const SectionDark = styled.div`
     top: 0;
     border-top: 400px solid transparent;
     border-left: 100px solid #1b3349;
+    @media ${device.lg} {
+      display: none;
+    }
   }
 `;
 
@@ -56,17 +68,15 @@ const SectionLight = styled.div`
   bottom: 0;
   left: 0;
   z-index: -1;
-
 `;
 
 const ServiceBlock = styled.div`
   padding: 60px 55px;
   z-index: 10;
-  line-height: 155%;
 `;
 
 const ServiceDarkBlueBlock = styled(ServiceBlock)`
-  padding-left: 100px; 
+  padding-left: 100px;
   p {
     text-transform: uppercase;
     margin-bottom: 30px;
@@ -80,6 +90,11 @@ const ServiceDarkBlueBlock = styled(ServiceBlock)`
     font-size: 24px;
     font-weight: 700;
     cursor: pointer;
+
+    @media ${device.lg} {
+      width: 300px;
+      padding: 20px;
+    }
   }
 `;
 const ServiceLightBlueBlock = styled(ServiceBlock)`
@@ -102,33 +117,39 @@ export default function ServicesRequest() {
       <HeadingWrapper>
         <h2>Shipbuilding facilities</h2>
       </HeadingWrapper>
-      <SectionWrapper>
-        <SectionLight />
-        <SectionDark />
-        <StyledContainer>
-          <ServiceLightBlueBlock>
-            <h3>Title</h3>
-            <p>
-              The company is able to build all kind of hulls from small fishing
-              trawlers up to cargo vessels using 2 building workshops for
-              pre-assembling of sections and blocks up to 50 tons.
-            </p>
-            <p>
-              The final assembly including zinc metalizing, painting and
-              outfitting is performed in the dry-dock. The company builds steel
-              hulls including hulls with partial out-fitting as well as delivers
-              turnkey vessels for our Scandinavian and European customers.
-            </p>
-          </ServiceLightBlueBlock>
-          <ServiceDarkBlueBlock>
-            <p>
-              If you require any further information we shall be happy to let
-              you have this, on request.
-            </p>
-            <button>CTA</button>
-          </ServiceDarkBlueBlock>
-        </StyledContainer>
-      </SectionWrapper>
+      <DesktopContainer>
+        <SectionWrapper>
+          <SectionLight />
+          <SectionDark />
+          <StyledContainer>
+            <ServiceLightBlueBlock>
+              <h3>Title</h3>
+              <p>
+                The company is able to build all kind of hulls from small
+                fishing trawlers up to cargo vessels using 2 building workshops
+                for pre-assembling of sections and blocks up to 50 tons.
+              </p>
+              <p>
+                The final assembly including zinc metalizing, painting and
+                outfitting is performed in the dry-dock. The company builds
+                steel hulls including hulls with partial out-fitting as well as
+                delivers turnkey vessels for our Scandinavian and European
+                customers.
+              </p>
+            </ServiceLightBlueBlock>
+            <ServiceDarkBlueBlock>
+              <p>
+                If you require any further information we shall be happy to let
+                you have this, on request.
+              </p>
+              <button>CTA</button>
+            </ServiceDarkBlueBlock>
+          </StyledContainer>
+        </SectionWrapper>
+      </DesktopContainer>
+      <TabletContainer>
+        <ServiceRequestMobile />
+      </TabletContainer>
     </>
   );
 }

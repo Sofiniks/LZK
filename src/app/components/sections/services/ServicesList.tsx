@@ -1,6 +1,8 @@
 'use client';
 import styled from 'styled-components';
 import ContainerLayout from '../../layouts/ContainerLayout';
+import ServicesListMobile from './ServicesListMobile';
+import { DesktopContainer, TabletContainer, device } from '@/theme/breakpoints';
 
 const listData1 = [
   'Installation of the BWTS',
@@ -21,6 +23,14 @@ const SectionWrapper = styled.div`
   margin-bottom: 110px;
   position: relative;
   min-height: 400px;
+`;
+
+const StyledHeading = styled.h3`
+  font-size: 24px;
+  margin-bottom: 30px;
+  @media ${device.md} {
+    font-size: 20px;
+  }
 `;
 
 const StyledContainer = styled(ContainerLayout)`
@@ -70,7 +80,6 @@ const ServiceList = styled.ul`
 const ServiceItem = styled.li`
   margin-bottom: 30px;
   list-style-type: circle;
-  line-height: 155%;
   &:last-of-type {
     margin-bottom: 0;
   }
@@ -84,21 +93,34 @@ const ServiceListDarkBlue = styled(ServiceList)`
 
 export default function ServicesList() {
   return (
-    <SectionWrapper>
-      <SectionDark />
-      <SectionLight />
-      <StyledContainer>
-        <ServiceListDarkBlue>
-          {listData1.map((item, index) => {
-            return <ServiceItem key={index}>{item}</ServiceItem>;
-          })}
-        </ServiceListDarkBlue>
-        <ServiceListLightBlue>
-          {listData2.map((item, index) => {
-            return <ServiceItem key={index}>{item}</ServiceItem>;
-          })}
-        </ServiceListLightBlue>
-      </StyledContainer>
-    </SectionWrapper>
+    <>
+      <ContainerLayout>
+        <StyledHeading>
+          The company offers the following services:{' '}
+        </StyledHeading>
+      </ContainerLayout>
+
+      <DesktopContainer>
+        <SectionWrapper>
+          <SectionDark />
+          <SectionLight />
+          <StyledContainer>
+            <ServiceListDarkBlue>
+              {listData1.map((item, index) => {
+                return <ServiceItem key={index}>{item}</ServiceItem>;
+              })}
+            </ServiceListDarkBlue>
+            <ServiceListLightBlue>
+              {listData2.map((item, index) => {
+                return <ServiceItem key={index}>{item}</ServiceItem>;
+              })}
+            </ServiceListLightBlue>
+          </StyledContainer>
+        </SectionWrapper>
+      </DesktopContainer>
+      <TabletContainer>
+        <ServicesListMobile />
+      </TabletContainer>
+    </>
   );
 }

@@ -2,6 +2,7 @@
 import styled from 'styled-components';
 import getIconComponent from '../../icons/IconMapper';
 import ContainerLayout from '../../layouts/ContainerLayout';
+import { device } from '@/theme/breakpoints';
 
 interface ServiceCardsData {
   iconKey: string;
@@ -35,15 +36,30 @@ const HeadingWrapper = styled.div`
   text-align: center;
   display: flex;
   justify-content: center;
+  @media ${device.lg} {
+    margin-bottom: 40px;
+  }
   h3 {
     font-size: 24px;
     max-width: 70%;
+    @media ${device.sm} {
+      font-size: 20px;
+      max-width: 100%;
+    }
   }
 `;
 const CardList = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 10px;
+  @media ${device.lg} {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  @media ${device.sm} {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 `;
 const CardItem = styled.li`
   background-color: #1b3349;
@@ -51,9 +67,19 @@ const CardItem = styled.li`
   min-height: 460px;
   padding: 20px 50px 60px 25px;
   p {
-    height: 300px;
+    height: 350px;
     padding-bottom: 40px;
     border-bottom: 1px solid #fff;
+    @media ${device.sm} {
+      height: 250px;
+      padding-bottom: 20px;
+    }
+  }
+  @media ${device.lg} {
+    min-height: 300px;
+  }
+  @media ${device.sm} {
+    padding-bottom: 40px;
   }
 `;
 const IconWrapper = styled.div`

@@ -2,6 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ContainerLayout from '../../layouts/ContainerLayout';
+import { device } from '@/theme/breakpoints';
 
 const data1 = [
   {
@@ -72,14 +73,11 @@ const HeadingWrapper = styled.div`
     font-size: 24px;
     max-width: 70%;
   }
-  @media (max-width: 321px) {
+  @media ${device.sm} {
     h3 {
       max-width: 290px;
-      font-family: Sinkin Sans;
       font-size: 20px;
       font-weight: 500;
-      line-height: 31px;
-      letter-spacing: 0em;
       text-align: left;
     }
   }
@@ -90,6 +88,11 @@ const TableSection = styled.ul`
   grid-template-columns: 1fr 1fr;
   column-gap: 10px;
   margin-bottom: 70px;
+  @media ${device.md} {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
 `;
 
 const StyledTable = styled.table`
@@ -106,18 +109,19 @@ const StyledTable = styled.table`
     text-align: center;
   }
 
-  @media (max-width: 321px) {
-    width: 290px;
+  @media ${device.sm} {
+    width: 100%;
     td,
     th {
       min-width: auto;
       height: auto;
       border: 1px solid white;
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 500;
       line-height: 15px;
       letter-spacing: 0em;
       text-align: center;
+      padding: 5px;
     }
   }
 `;
@@ -128,6 +132,9 @@ gap: 20px;
 grid-template-columns: 1fr 1fr;
 justify-content: space-between;
 width: 100%;
+@media ${device.md} {
+  grid-template-columns: 1fr;
+}
 `;
 
 const CardItem = styled.li`
@@ -136,6 +143,12 @@ padding: 45px 90px;
 h3 {
   margin-bottom: 20px;
   font-size: 32px;
+}
+@media ${device.lg} {
+  padding: 40px 60px;
+}
+@media ${device.sm} {
+  padding: 25px 20px;
 }
 `;
 
