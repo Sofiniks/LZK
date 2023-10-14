@@ -2,38 +2,75 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 import ContainerLayout from '../../layouts/ContainerLayout';
+import { device } from '@/theme/breakpoints';
 
 const StyledSection = styled.section`
-  min-height: 80vh;
+  height: 600px;
+  margin-bottom: 60px;
+  @media ${device.md} {
+    height: 90vh;
+    margin-bottom: 30px;
+  }
+  @media ${device.sm} {
+    height: 70vh;
+  }
 `;
 const SectionBackground = styled.div<{ $url: string }>`
   background: ${({ $url }) =>
     `linear-gradient(0deg, rgba(17,48,77, 1) 0%, rgba(0,0,0,0) 50%, rgba(17,48,77,1) 100%), url(${$url})`};
   background-repeat: no-repeat;
   background-size: cover;
-  height: 80vh;
+  height: 600px;
+  @media ${device.md} {
+    height: 90vh;
+  }
+  @media ${device.sm} {
+    height: 70vh;
+  }
 `;
 const SectionContent = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  justify-items: center;
   padding: 80px 0;
+  @media ${device.lg} {
+    padding: 60px 0;
+    gap: 30px;
+  }
+  @media ${device.md} {
+    grid-template-columns: 1fr;
+  }
+  @media ${device.sm} {
+    gap: 20px;
+  }
 `;
 const ImageWrapper = styled.div`
   position: relative;
-  margin-right: 50px;
-  &:last-of-type {
-    margin-right: 0;
-  }
+  @media ${device.lg} {
+    img {
+      width: 400px;
+      height: 400px;
+    }
+  
+  @media ${device.sm} {
+    img {
+      width: 300px;
+      height: 300px;
+    }
+  }}
 `;
 const StyledHeading = styled.h4`
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 30px;
+  font-size: 40px;
   text-transform: uppercase;
   font-weight: 700;
+  @media ${device.sm} {
+    font-size: 30px;
+  }
   &::after {
     content: '';
     background-color: #fff;

@@ -2,33 +2,65 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 import ContainerLayout from '../../layouts/ContainerLayout';
+import { device, TabletContainer, DesktopContainer } from '@/theme/breakpoints';
 import LocationIcon from '../../icons/LocationIcon';
 import EmailIcon from '../../icons/EmailIcon';
 
 const StyledSection = styled.section`
   margin-bottom: 120px;
+  @media ${device.md} {
+    margin-bottom: 40px;
+  }
 `;
 const StyledContainer = styled(ContainerLayout)`
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `;
-const TextBlock = styled.div``;
+const TextBlock = styled.div`
+  @media ${device.lg} {
+    width: 45%;
+  }
+  @media ${device.md} {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+  }
+`;
 const StyledSubtitle = styled.h3`
   font-size: 24px;
   margin-bottom: 50px;
 `;
 const ImagesBlock = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
 `;
-const ImageWrapper = styled.div``;
+const ImageWrapper = styled.div`
+@media ${device.lg} {
+  img {
+    width: 450px;
+    height: auto;
+  }
+}
+`;
 const FormWrapper = styled.div`
   margin-bottom: 60px;
+  @media ${device.lg} {
+    margin-bottom: 30px;
+  }
+  @media ${device.sm} {
+    margin-bottom: 50px;
+  }
+  
 `;
 const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
+  
   input,
   textarea {
     background-color: transparent;
@@ -114,24 +146,26 @@ export default function ContactUs() {
             </ContactInfoItem>
           </ContactInfoBlock>
         </TextBlock>
-        <ImagesBlock>
-          <ImageWrapper>
-            <Image
-              src="/images/contact_us_1.png"
-              width={630}
-              height={345}
-              alt="airfoto"
-            />
-          </ImageWrapper>
-          <ImageWrapper>
-            <Image
-              src="/images/contact_us_2.png"
-              width={630}
-              height={345}
-              alt="airfoto"
-            />
-          </ImageWrapper>
-        </ImagesBlock>
+        <DesktopContainer>
+          <ImagesBlock>
+            <ImageWrapper>
+              <Image
+                src="/images/contact_us_1.png"
+                width={630}
+                height={345}
+                alt="airfoto"
+              />
+            </ImageWrapper>
+            <ImageWrapper>
+              <Image
+                src="/images/contact_us_2.png"
+                width={630}
+                height={345}
+                alt="airfoto"
+              />
+            </ImageWrapper>
+          </ImagesBlock>
+        </DesktopContainer>
       </StyledContainer>
     </StyledSection>
   );

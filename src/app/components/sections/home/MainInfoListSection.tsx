@@ -1,21 +1,38 @@
 'use client';
 import styled from 'styled-components';
+import { device } from '@/theme/breakpoints';
 import ContainerLayout from '../../layouts/ContainerLayout';
 import ShipGreyGradient from '../../icons/ShipGreyGradient';
 
 const StyledSection = styled.section`
 margin-bottom: 90px;
+@media ${device.md} {
+  margin-bottom: 60px;
+}
 `;
 const StyledHeading = styled.h2`
   text-transform: uppercase;
   text-align: center;
   font-weight: 500;
   margin-bottom: 60px;
+  @media ${device.sm} {
+    margin-bottom: 30px;
+  }
 `;
 const StyledList = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 30px;
+  gap: 30px;
+  @media ${device.lg} {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+  }
+  @media ${device.sm} {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    justify-items: center;
+  }
 `;
 const StyledCard = styled.li`
   width: 270px;
@@ -28,6 +45,9 @@ const StyledCard = styled.li`
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 10px;
+    @media ${device.sm} {
+      font-size: 20px;
+    }
   }
   p {
     font-weight: 300;
