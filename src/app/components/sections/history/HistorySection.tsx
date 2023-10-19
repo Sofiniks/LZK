@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import ContainerLayout from '../../layouts/ContainerLayout';
 import Image from 'next/image';
 import WhiteShip from '../../icons/WhiteShip';
+import Anchor from '../../icons/Anchor';
 
 const SectionWrapper = styled.div`
   margin-bottom: 120px;
@@ -71,6 +72,13 @@ const History1 = styled.div`
     bottom: 50%;
 
   }
+  svg {
+    position: absolute;
+    z-index: 15;
+    top: 50%;
+    left: -80px;
+    transform: translate(-50%, -50%);
+  }
 `;
 const History2 = styled.div`
   margin-top: 200px;
@@ -103,6 +111,13 @@ const History2 = styled.div`
     flex: 1;
     margin-left: 10px;
   }
+  svg {
+    position: absolute;
+    z-index: 15;
+    top: 50%;
+    right: -80px;
+    transform: translate(50%, -50%);
+  }
 `;
 const History3 = styled.div`
   display: flex;
@@ -128,6 +143,13 @@ const History3 = styled.div`
     height: 100%;
     flex: 1;
     margin-left: 10px;
+  }
+  svg {
+    position: absolute;
+    z-index: 15;
+    top: 50%;
+    left: -80px;
+    transform: translate(-50%, -50%);
   }
 `;
 const History4 = styled.div`
@@ -155,6 +177,13 @@ const History4 = styled.div`
     flex: 1;
     margin-right: 10px;
   }
+  svg {
+    position: absolute;
+    z-index: 15;
+    top: 50%;
+    right: -80px;
+    transform: translate(50%, -50%);
+  }
 `;
 const History5 = styled.div`
   display: flex;
@@ -176,6 +205,13 @@ const History5 = styled.div`
   p {
     text-align: justify;
     margin-top: 10px;
+  }
+  svg {
+    position: absolute;
+    z-index: 15;
+    top: 50%;
+    left: -80px;
+    transform: translate(-50%, -50%);
   }
 `;
 const History6 = styled.div`
@@ -211,6 +247,13 @@ const History6 = styled.div`
   p {
     text-align: justify;
   }
+  svg {
+    position: absolute;
+    z-index: 15;
+    top: 50%;
+    right: -160px;
+    transform: translate(50%, -50%);
+  }
 `;
 
 const History7 = styled.div`
@@ -231,6 +274,13 @@ const History7 = styled.div`
   p {
     text-align: justify;
     margin-top: 15px;
+  }
+  svg {
+    position: absolute;
+    z-index: 15;
+    bottom: 0;
+    left: -270px;
+    transform: translate(-50%, 50%);
   }
 `;
 
@@ -264,6 +314,7 @@ export default function HistorySection() {
                 height={134}
                 alt="history"
               />
+              <Anchor />
             </div>
           </History2>
           <History4>
@@ -279,6 +330,7 @@ export default function HistorySection() {
               sector such as farming. Also ship’s and industrial steam boilers
               have been fabricated...
             </p>
+            <Anchor />
           </History4>
           <History6>
             <div>
@@ -298,6 +350,7 @@ export default function HistorySection() {
               ship-repair and new building workshops have started to work in the
               same year.
             </p>
+            <Anchor />
           </History6>
         </SectionLeft>
         <SectionRight>
@@ -315,6 +368,7 @@ export default function HistorySection() {
               re-equipped at berths. About 5 thousand of workers have been
               engaged in the Yard’s workshops and repaired objects.
             </p>
+            <Anchor />
           </History1>
           <History3>
             <p>
@@ -329,6 +383,7 @@ export default function HistorySection() {
               height={124}
               alt="history"
             />
+            <Anchor />
           </History3>
           <History5>
             <Image
@@ -341,6 +396,7 @@ export default function HistorySection() {
               For many years docking of vessels at Yard has been done by the
               Maltese system.
             </p>
+            <Anchor />
           </History5>
           <History7>
             <StyledYear>1893</StyledYear>
@@ -349,6 +405,7 @@ export default function HistorySection() {
               naval base on the western outpost of the Russian Empire was held
               on 12 August 1893 at the presence of the Emperor Alexander III.
             </p>
+            <Anchor />
           </History7>
         </SectionRight>
       </StyledContainer>
