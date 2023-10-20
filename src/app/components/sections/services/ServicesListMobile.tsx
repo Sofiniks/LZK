@@ -53,7 +53,7 @@ background-color: #0b1f31;
 margin-bottom: 20px;
 `;
 const ServiceListLight = styled(ServiceList)`
-  background-color: #1b3349;
+  background-color: #314a61;
 `;
 const ServiceItem = styled.li`
   margin-bottom: 30px;

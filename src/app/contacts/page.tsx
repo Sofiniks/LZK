@@ -4,7 +4,7 @@ import ContactUs from '../components/sections/contactUs/ContactUsSection';
 export default function ServicesPage() {
   return (
     <main>
-      <HeroSection />
+      <HeroSection title="Contact Us"/>
       <ContactUs />
     </main>
   );

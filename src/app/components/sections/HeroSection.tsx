@@ -3,10 +3,16 @@ import styled from 'styled-components';
 import { device } from '@/theme/breakpoints';
 
 const SectionWrapper = styled.section`
-  height: 1080px;
+  height: 900px;
   margin-bottom: 80px;
-  @media ${device.sm} {
-    height: 100vh;
+  @media (min-width: 1441px) {
+    height: 1080px;
+  }
+  @media (min-width: 1800px) {
+    height: 1300px;
+  }
+  @media ${device.md} {
+    height: 550px;
     margin-bottom: 40px;
   }
 `;
@@ -46,29 +52,14 @@ const SectionContent = styled.div`
       margin-bottom: 32px;
     }
   }
-  button {
-    background-color: transparent;
-    width: 447px;
-    padding: 29px 0 30px 0;
-    border: 2px solid #fff;
-    color: #fff;
-    font-size: 24px;
-    font-weight: 700;
-    cursor: pointer;
-    @media ${device.md} {
-      width: 290px;
-      padding: 18px 0;
-      font-size: 20px;
-    }
-  }
+ 
 `;
-export default function HeroSection() {
+export default function HeroSection({title}: {title: string}) {
   return (
     <SectionWrapper>
       <SectionBackground $url="/images/hero.png" $urlMobile="/images/mobile_hero.png">
         <SectionContent>
-          <h1>LZK - TITLE</h1>
-          <button>CTA</button>
+          <h1>{title}</h1>
         </SectionContent>
       </SectionBackground>
     </SectionWrapper>

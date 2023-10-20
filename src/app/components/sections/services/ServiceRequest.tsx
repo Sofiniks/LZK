@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import ContainerLayout from '../../layouts/ContainerLayout';
 import { DesktopContainer, TabletContainer, device } from '@/theme/breakpoints';
 import ServiceRequestMobile from './ServiceRequestMobile';
+import TransparentLink from '../../links/links';
 
 const SectionWrapper = styled.div`
   margin-bottom: 110px;
@@ -37,7 +38,7 @@ const StyledContainer = styled(ContainerLayout)`
 
 const SectionDark = styled.div`
   background-color: #0b1f31;
-  width: 50%; /* Takes half of the screen width */
+  width: 50%; 
   position: absolute;
   top: 0;
   bottom: 0;
@@ -53,7 +54,7 @@ const SectionDark = styled.div`
     left: 0;
     top: 0;
     border-top: 400px solid transparent;
-    border-left: 100px solid #1b3349;
+    border-left: 100px solid #314a61;
     @media ${device.lg} {
       display: none;
     }
@@ -61,8 +62,8 @@ const SectionDark = styled.div`
 `;
 
 const SectionLight = styled.div`
-  background-color: #1b3349;
-  width: 50%; /* Takes half of the screen width */
+  background-color: #314a61;
+  width: 50%; 
   position: absolute;
   top: 0;
   bottom: 0;
@@ -142,7 +143,7 @@ export default function ServicesRequest() {
                 If you require any further information we shall be happy to let
                 you have this, on request.
               </p>
-              <button>CTA</button>
+              <TransparentLink href="/contacts" text="CTA"/>
             </ServiceDarkBlueBlock>
           </StyledContainer>
         </SectionWrapper>

@@ -7,7 +7,7 @@ import ServicesRequest from "../components/sections/services/ServiceRequest";
 export default function ServicesPage() {
   return (
     <main>
-      <HeroSection />
+      <HeroSection title="Services"/>
       <ServicesCards/>
       <ServicesDataTables/>
       <ServicesList/>

@@ -16,7 +16,8 @@ const StyledHeader = styled.header`
     rgba(255, 255, 255, 0) 51.7%
   );
   padding: 25px 0;
-  position: fixed;
+  position: absolute;
+  top: 0;
   width: 100%;
   z-index: 10;
   @media ${device.md} {

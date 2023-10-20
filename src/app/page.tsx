@@ -6,7 +6,7 @@ import ServicesSection from "./components/sections/home/ServicesSection";
 export default function Home() {
   return (
     <main>
-      <HeroSection/>
+      <HeroSection title="About Us"/>
       <MainInfoListSection/>
       <ServicesSection/>
       <LocationSection/>

@@ -41,7 +41,7 @@ const StyledContainer = styled(ContainerLayout)`
 
 const SectionDark = styled.div`
   background-color: #0b1f31;
-  width: 50%; /* Takes half of the screen width */
+  width: 50%; 
   position: absolute;
   top: 0;
   bottom: 0;
@@ -50,8 +50,8 @@ const SectionDark = styled.div`
 `;
 
 const SectionLight = styled.div`
-  background-color: #1b3349;
-  width: 50%; /* Takes half of the screen width */
+  background-color: #314a61;
+  width: 50%; 
   position: absolute;
   top: 0;
   bottom: 0;
@@ -67,7 +67,7 @@ const SectionLight = styled.div`
     left: 0;
     top: 0;
     border-top: 400px solid transparent;
-    border-right: 100px solid #1b3349;
+    border-right: 100px solid #314a61;
     transform: translate(-100%, 0);
   }
 `;

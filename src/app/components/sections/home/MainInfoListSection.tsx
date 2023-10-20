@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { device } from '@/theme/breakpoints';
 import ContainerLayout from '../../layouts/ContainerLayout';
 import ShipGreyGradient from '../../icons/ShipGreyGradient';
+import infoData from '../../../data/aboutUs.json';
 
 const StyledSection = styled.section`
 margin-bottom: 90px;
@@ -69,32 +70,13 @@ const StyledIconWrapper = styled.div`
   margin-bottom: 10px;
 `;
 
-const infoData = [
-  {
-    title: 'Staff',
-    desc: 'Lorem ipsum dolor sit. Nostrum assumenda eos nisi culpa quod placeat suscipit laborum harum vero! Dicta.',
-  },
-  {
-    title: 'Staff1',
-    desc: 'Lorem ipsum dolor sit. Nostrum assumenda eos nisi culpa quod placeat suscipit laborum harum vero! Dicta.',
-  },
-  {
-    title: 'Staff2',
-    desc: 'Lorem ipsum dolor sit. Nostrum assumenda eos nisi culpa quod placeat suscipit laborum harum vero! Dicta.',
-  },
-  {
-    title: 'Staff3',
-    desc: 'Lorem ipsum dolor sit. Nostrum assumenda eos nisi culpa quod placeat suscipit laborum harum vero! Dicta.',
-  },
-];
-
 export default function MainInfoListSection() {
   return (
     <StyledSection>
       <ContainerLayout>
         <StyledHeading>Text</StyledHeading>
         <StyledList>
-          {infoData.map((item) => {
+          {infoData.mainInfoCards.map((item) => {
             return (
               <StyledCard key={item.title}>
                 <StyledIconWrapper>

@@ -1,0 +1,20 @@
+{
+    "mainInfoCards": [
+        {
+    "title": "Staff",
+    "desc": "Lorem ipsum dolor sit. Nostrum assumenda eos nisi culpa quod placeat suscipit laborum harum vero! Dicta."
+  },
+  {
+    "title": "Staff1",
+    "desc": "Lorem ipsum dolor sit. Nostrum assumenda eos nisi culpa quod placeat suscipit laborum harum vero! Dicta."
+  },
+  {
+    "title": "Staff2",
+    "desc": "Lorem ipsum dolor sit. Nostrum assumenda eos nisi culpa quod placeat suscipit laborum harum vero! Dicta."
+  },
+  {
+    "title": "Staff3",
+   "desc" : "Lorem ipsum dolor sit. Nostrum assumenda eos nisi culpa quod placeat suscipit laborum harum vero! Dicta."
+  }
+    ]
+}

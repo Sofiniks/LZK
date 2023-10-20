@@ -3,65 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ContainerLayout from '../../layouts/ContainerLayout';
 import { device } from '@/theme/breakpoints';
-
-const data1 = [
-  {
-    Type: 'DRY-DOCK',
-    No: 'NO.1',
-    'Length(M)': '187',
-    'INNER WIDTH(M)': '25',
-    'MAX DRAFT(M)': '8',
-    'CRANES(T)': '2 x 20',
-  },
-  {
-    Type: 'DRY-DOCK',
-    No: 'NO.1',
-    'Length(M)': '220',
-    'INNER WIDTH(M)': '25',
-    'MAX DRAFT(M)': '8',
-    'CRANES(T)': '2 x 20',
-  },
-  {
-    Type: 'FLOATING DOCK',
-    No: '',
-    'Length(M)': '119',
-    'INNER WIDTH(M)': '19',
-    'MAX DRAFT(M)': '6',
-    'CRANES(T)': '1 x 5',
-  },
-];
-
-const data2 = [
-  {
-    NAME: 'BERTH No.19',
-    'Length(m)': '381.7',
-    'DEPTH(M)': '6.2',
-    'CRANES(T)': '1 x 32',
-  },
-  {
-    NAME: 'BERTH No.19',
-    'Length(m)': '381.7',
-    'DEPTH(M)': '6.2',
-    'CRANES(T)': '1 x 32',
-  },
-  {
-    NAME: 'BERTH No.19',
-    'Length(m)': '381.7',
-    'DEPTH(M)': '6.2',
-    'CRANES(T)': '1 x 32',
-  },
-];
-
-const cardsData = [
-  {
-    title: 'Title',
-    text: 'The company offers various kinds of anticorrosive treatments of hulls including high pressure washing, sand blasting up to Standard SA 2.5 as well as mechanical treatment and Coating with marine paints of cargo holds, ballast and fuel oil tanks.',
-  },
-  {
-    title: 'Title',
-    text: 'The company is experienced in repair of shafts, propellers and rudder systems. The professional team performs building up and mechanical treatment of the shafts up to 16 m length, prefabrication of bronze bushes and renewal shaft seals.',
-  },
-];
+import data from '@/app/data/services.json';
 
 const SectionWrapper = styled.div`
   margin-bottom: 70px;
@@ -88,6 +30,10 @@ const TableSection = styled.ul`
   grid-template-columns: 1fr 1fr;
   column-gap: 10px;
   margin-bottom: 70px;
+  overflow-x: scroll;
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
   @media ${device.md} {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -110,7 +56,7 @@ const StyledTable = styled.table`
   }
 
   @media ${device.sm} {
-    width: 100%;
+    max-width: 350px;
     td,
     th {
       min-width: auto;
@@ -127,29 +73,29 @@ const StyledTable = styled.table`
 `;
 
 const CardsSection = styled.ul`
-display: grid;
-gap: 20px;
-grid-template-columns: 1fr 1fr;
-justify-content: space-between;
-width: 100%;
-@media ${device.md} {
-  grid-template-columns: 1fr;
-}
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  width: 100%;
+  @media ${device.md} {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const CardItem = styled.li`
-border: 5px solid rgba(255,255,255,.5);
-padding: 45px 90px;
-h3 {
-  margin-bottom: 20px;
-  font-size: 32px;
-}
-@media ${device.lg} {
-  padding: 40px 60px;
-}
-@media ${device.sm} {
-  padding: 25px 20px;
-}
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  padding: 45px 90px;
+  h3 {
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+  @media ${device.lg} {
+    padding: 40px 60px;
+  }
+  @media ${device.sm} {
+    padding: 25px 20px;
+  }
 `;
 
 function DataTable({ titles, data }: { titles: string[]; data: any[] }) {
@@ -183,20 +129,18 @@ export default function ServicesDataTables() {
           <h3>Technical Data of Docks and repair berths:</h3>
         </HeadingWrapper>
         <TableSection>
-          <DataTable titles={Object.keys(data1[0])} data={data1} />
-          <DataTable titles={Object.keys(data2[0])} data={data2} />
+          <DataTable titles={Object.keys(data.table1[0])} data={data.table1} />
+          <DataTable titles={Object.keys(data.table2[0])} data={data.table2} />
         </TableSection>
         <CardsSection>
-          {
-            cardsData.map((item, index) => {
-              return (
-                <CardItem key={index}>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </CardItem>
-              )
-            })
-          }
+          {data.tableCards.map((item, index) => {
+            return (
+              <CardItem key={index}>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </CardItem>
+            );
+          })}
         </CardsSection>
       </ContainerLayout>
     </SectionWrapper>

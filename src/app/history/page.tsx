@@ -4,7 +4,7 @@ import HistorySection from "../components/sections/history/HistorySection";
 export default function HistoryPage() {
   return (
     <main>
-      <HeroSection />
+      <HeroSection title="History"/>
       <HistorySection />
     </main>
   );

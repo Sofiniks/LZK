@@ -2,9 +2,10 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 import ContainerLayout from '../../layouts/ContainerLayout';
-import { device, TabletContainer, DesktopContainer } from '@/theme/breakpoints';
+import { device, DesktopContainer } from '@/theme/breakpoints';
 import LocationIcon from '../../icons/LocationIcon';
 import EmailIcon from '../../icons/EmailIcon';
+import contactsData from '../../../data/contacts.json';
 
 const StyledSection = styled.section`
   margin-bottom: 120px;
@@ -25,7 +26,6 @@ const TextBlock = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-
   }
 `;
 const StyledSubtitle = styled.h3`
@@ -40,12 +40,12 @@ const ImagesBlock = styled.div`
   align-items: center;
 `;
 const ImageWrapper = styled.div`
-@media ${device.lg} {
-  img {
-    width: 450px;
-    height: auto;
+  @media ${device.lg} {
+    img {
+      width: 450px;
+      height: auto;
+    }
   }
-}
 `;
 const FormWrapper = styled.div`
   margin-bottom: 60px;
@@ -55,12 +55,11 @@ const FormWrapper = styled.div`
   @media ${device.sm} {
     margin-bottom: 50px;
   }
-  
 `;
 const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
-  
+
   input,
   textarea {
     background-color: transparent;
@@ -78,9 +77,14 @@ const StyledForm = styled.form`
     padding: 24px;
     color: #fff;
     background-color: rgba(255, 255, 255, 0.2);
-    border: none;
+    border: 2px solid transparent;
     cursor: pointer;
     text-align: left;
+    transition: all 0.3s;
+    &:hover {
+      background-color: transparent;
+      border: 2px solid white;
+    }
   }
 `;
 const ContactInfoBlock = styled.div``;
@@ -101,7 +105,11 @@ const ContactInfoItem = styled.div`
 `;
 const InfoWithIcon = styled.div`
   display: flex;
-  /* margin-bottom: 15px; */
+  align-items: center;
+  margin-bottom: 15px;
+  p {
+    margin-bottom: 0;
+  }
   &:last-of-type {
     margin-bottom: 0;
   }
@@ -110,40 +118,43 @@ const InfoWithIcon = styled.div`
   }
 `;
 
+const ContactsList = () => {
+  return contactsData.map((item, index) => {
+    return (
+      <ContactInfoItem key={index}>
+        <h4>{item.title}</h4>
+        {item.registrationNumber && <p>{item.registrationNumber}</p>}
+        {item.address && (
+          <InfoWithIcon>
+            <LocationIcon />
+            <p>{item.address}</p>
+          </InfoWithIcon>
+        )}
+        <InfoWithIcon>
+          <EmailIcon />
+          <p>{item.email}</p>
+        </InfoWithIcon>
+      </ContactInfoItem>
+    );
+  })
+}
+
 export default function ContactUs() {
   return (
     <StyledSection>
       <StyledContainer>
         <TextBlock>
           <FormWrapper>
-            <StyledSubtitle>Subtitle</StyledSubtitle>
+            <StyledSubtitle>Contact Us</StyledSubtitle>
             <StyledForm>
               <input type="text" placeholder="Email" />
               <input type="text" placeholder="Name" />
               <textarea placeholder="Text" cols={30} rows={10}></textarea>
-              <button>Submit</button>
+              <button type="submit">Submit</button>
             </StyledForm>
           </FormWrapper>
           <ContactInfoBlock>
-            <ContactInfoItem>
-              <h4>Liepaja Northen Shipyard Ltd</h4>
-              <p>Reg. Nr. LV42103093384</p>
-              <InfoWithIcon>
-                <LocationIcon />
-                <p>44D, Generala Baloza Str. Liepaja, LV-3402, Latvia</p>
-              </InfoWithIcon>
-              <InfoWithIcon>
-                <EmailIcon />
-                <p>office@lzk.lv</p>
-              </InfoWithIcon>
-            </ContactInfoItem>
-            <ContactInfoItem>
-              <h4>SHIP AGENT ALVINA Ship Agency Ltd</h4>
-              <InfoWithIcon>
-                <EmailIcon />
-                <p>alvinaship@gmail.com</p>
-              </InfoWithIcon>
-            </ContactInfoItem>
+            <ContactsList/>
           </ContactInfoBlock>
         </TextBlock>
         <DesktopContainer>

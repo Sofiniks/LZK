@@ -26,14 +26,10 @@ const menuLinks = [
 ];
 
 const StyledFooter = styled.footer`
-  min-height: 270px;
+  min-height: max-content;
   background-color: #071420;
   @media ${device.md} {
-    min-height: 350px;
     width: 100%;
-  }
-  @media ${device.sm} {
-    min-height: 500px;
   }
 `;
 const StyledContainer = styled(ContainerLayout)`
@@ -46,22 +42,21 @@ const StyledContainer = styled(ContainerLayout)`
     justify-content: center;
   }
 `;
-const StyledTabletContainer = styled(TabletContainer)`
-`;
+
 const LogoWrapper = styled.div`
-@media ${device.md} {
-  margin-right: 40px;
-}
+  @media ${device.md} {
+    margin-right: 40px;
+  }
 `;
 const NavTop = styled.div`
-display: flex;
-align-items: center;
-@media ${device.md} {
-  margin-bottom: 20px;
-  align-items: flex-start;
-  justify-content: space-between;
-  width: 100%;
-}
+  display: flex;
+  align-items: center;
+  @media ${device.md} {
+    margin-bottom: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+  }
 `;
 const NavBottom = styled.div`
   @media ${device.md} {
@@ -83,19 +78,18 @@ const NavList = styled.ul`
     gap: 10px;
     justify-items: flex-start;
   }
-
 `;
 const NavItem = styled.li`
-margin-bottom: 30px;
-text-transform: uppercase;
-&:last-of-type {
-  margin-bottom: 0;
-}
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 `;
 const ContactList = styled.ul`
-@media ${device.sm} {
-  margin-bottom: 20px;
-}
+  @media ${device.sm} {
+    margin-bottom: 20px;
+  }
 `;
 const ContactItem = styled.li`
   margin-bottom: 35px;
@@ -113,23 +107,22 @@ const ContactItem = styled.li`
   }
 `;
 const CopyrightBlock = styled.div`
-@media ${device.md} {
-  display: flex;
-  flex-direction: column;
-}
-  
+  @media ${device.md} {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 const CertificationWrapper = styled.div`
-margin-bottom: 38px;
-@media ${device.md} {
-  margin-bottom: 10px;
-}
+  margin-bottom: 38px;
+  @media ${device.md} {
+    margin-bottom: 10px;
+  }
 `;
 const EmailBlock = styled.div`
-display: flex;
-p {
-  margin-left: 5px;
-}
+  display: flex;
+  p {
+    margin-left: 5px;
+  }
 `;
 
 export default function Footer() {
@@ -178,7 +171,7 @@ export default function Footer() {
           </CopyrightBlock>
         </StyledContainer>
       </DesktopContainer>
-      <StyledTabletContainer>
+      <TabletContainer>
         <StyledContainer>
           <NavTop>
             <LogoWrapper>
@@ -229,7 +222,7 @@ export default function Footer() {
             </CopyrightBlock>
           </NavBottom>
         </StyledContainer>
-      </StyledTabletContainer>
+      </TabletContainer>
     </StyledFooter>
   );
 }

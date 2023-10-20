@@ -1,7 +1,7 @@
 'use client';
 import styled from 'styled-components';
 import ContainerLayout from '../../layouts/ContainerLayout';
-import { device } from '@/theme/breakpoints';
+import TransparentLink from '../../links/links';
 
 const StyledContainer = styled(ContainerLayout)`
   display: flex;
@@ -70,7 +70,7 @@ export default function ServiceRequestMobile() {
               If you require any further information we shall be happy to let
               you have this, on request.
             </p>
-            <button>CTA</button>
+            <TransparentLink text="CTA" href="/contacts"/>
           </ServiceLightBlueBlock>
         </StyledContainer>
     

@@ -9,10 +9,9 @@ const StyledSection = styled.section`
   margin-bottom: 60px;
   @media ${device.md} {
     height: 90vh;
-    margin-bottom: 30px;
   }
   @media ${device.sm} {
-    height: 70vh;
+    height: 80vh;
   }
 `;
 const SectionBackground = styled.div<{ $url: string }>`
@@ -25,7 +24,7 @@ const SectionBackground = styled.div<{ $url: string }>`
     height: 90vh;
   }
   @media ${device.sm} {
-    height: 70vh;
+    height: 80vh;
   }
 `;
 const SectionContent = styled.div`
@@ -52,13 +51,14 @@ const ImageWrapper = styled.div`
       width: 400px;
       height: 400px;
     }
-  
-  @media ${device.sm} {
-    img {
-      width: 300px;
-      height: 300px;
+
+    @media ${device.sm} {
+      img {
+        width: 300px;
+        height: 300px;
+      }
     }
-  }}
+  }
 `;
 const StyledHeading = styled.h4`
   position: absolute;
@@ -100,7 +100,7 @@ export default function ServicesSection() {
                 width={500}
                 alt="Our services"
               />
-              <StyledHeading>Судоремонт</StyledHeading>
+              <StyledHeading>Ship Repair</StyledHeading>
             </ImageWrapper>
             <ImageWrapper>
               <Image
@@ -109,7 +109,7 @@ export default function ServicesSection() {
                 width={500}
                 alt="Our services"
               />
-              <StyledHeading>Судоcтроение</StyledHeading>
+              <StyledHeading>Shipbuilding</StyledHeading>
             </ImageWrapper>
           </SectionContent>
         </ContainerLayout>
