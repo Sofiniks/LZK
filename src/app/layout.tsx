@@ -4,6 +4,7 @@ import { Merriweather_Sans } from 'next/font/google';
 import Header from './components/Header/Header';
 import Footer from './components/Footer';
 import PageLayout from './components/layouts/PageLayout';
+import StyledComponentsRegistry from '@/lib/registry';
 
 const merriweather_sans = Merriweather_Sans({
   subsets: ['latin', 'cyrillic-ext'],
@@ -23,11 +24,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={merriweather_sans.className}>
-        <PageLayout>
-          <Header />
-          {children}
-          <Footer />
-        </PageLayout>
+        <StyledComponentsRegistry>
+          <PageLayout>
+            <Header />
+            {children}
+            <Footer />
+          </PageLayout>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );

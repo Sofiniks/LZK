@@ -8,10 +8,10 @@ const StyledSection = styled.section`
   height: 600px;
   margin-bottom: 60px;
   @media ${device.md} {
-    height: 90vh;
+    height: 900px;
   }
   @media ${device.sm} {
-    height: 80vh;
+    height: 700px;
   }
 `;
 const SectionBackground = styled.div<{ $url: string }>`
@@ -21,10 +21,10 @@ const SectionBackground = styled.div<{ $url: string }>`
   background-size: cover;
   height: 600px;
   @media ${device.md} {
-    height: 90vh;
+    height: 900px;
   }
   @media ${device.sm} {
-    height: 80vh;
+    height: 700px;
   }
 `;
 const SectionContent = styled.div`
@@ -68,6 +68,7 @@ const StyledHeading = styled.h4`
   font-size: 40px;
   text-transform: uppercase;
   font-weight: 700;
+  white-space: nowrap;
   @media ${device.sm} {
     font-size: 30px;
   }
