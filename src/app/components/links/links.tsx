@@ -11,8 +11,8 @@ interface ButtonProps {
 const StyledLink = styled(Link)`
   display: block;
   background-color: transparent;
-  width: 447px;
-  padding: 29px 0 30px 0;
+  width: 350px;
+  padding: 20px 0 30px 0;
   border: 2px solid #fff;
   color: #fff;
   font-size: 24px;

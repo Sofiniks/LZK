@@ -35,7 +35,12 @@ const StyledTabletContainer = styled(TabletContainer)`
   justify-content: space-between;
   align-items: center;
 `;
-const LogoWrapper = styled.div``;
+const LogoWrapper = styled.div`
+  transition: ease-out 0.3s;
+  &:hover {
+    transform: scale(1.07);
+  }
+`;
 const Navbar = styled.nav``;
 const NavList = styled.ul`
   display: flex;
@@ -94,7 +99,14 @@ export default function Header() {
       <ContainerLayout>
         <StyledDesktopContainer>
           <LogoWrapper>
-            <Image src="/images/logo.png" width={106} height={100} alt="logo" />
+            <Link href="/">
+              <Image
+                src="/images/logo.png"
+                width={106}
+                height={100}
+                alt="logo"
+              />
+            </Link>
           </LogoWrapper>
           <Navbar>
             <NavList>
@@ -108,7 +120,9 @@ export default function Header() {
         </StyledDesktopContainer>
         <StyledTabletContainer>
           <LogoWrapper>
-            <Image src="/images/logo.png" width={40} height={40} alt="logo" />
+            <Link href="/">
+              <Image src="/images/logo.png" width={40} height={40} alt="logo" />
+            </Link>
           </LogoWrapper>
           <div onClick={handleToggleMenu}>
             <Menu />

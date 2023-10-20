@@ -143,7 +143,7 @@ export default function ServicesRequest() {
                 If you require any further information we shall be happy to let
                 you have this, on request.
               </p>
-              <TransparentLink href="/contacts" text="CTA"/>
+              <TransparentLink href="/contacts?contactForm=true" text="CTA" />
             </ServiceDarkBlueBlock>
           </StyledContainer>
         </SectionWrapper>

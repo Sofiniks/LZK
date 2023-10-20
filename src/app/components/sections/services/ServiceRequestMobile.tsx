@@ -70,7 +70,7 @@ export default function ServiceRequestMobile() {
               If you require any further information we shall be happy to let
               you have this, on request.
             </p>
-            <TransparentLink text="CTA" href="/contacts"/>
+            <TransparentLink text="CTA" href="/contacts?contactForm=true"/>
           </ServiceLightBlueBlock>
         </StyledContainer>
     

@@ -1,6 +1,9 @@
 'use client';
 import styled from 'styled-components';
 import Image from 'next/image';
+import { useEffect } from 'react';
+import { scroller, Element } from 'react-scroll';
+import { useSearchParams } from 'next/navigation';
 import ContainerLayout from '../../layouts/ContainerLayout';
 import { device, DesktopContainer } from '@/theme/breakpoints';
 import LocationIcon from '../../icons/LocationIcon';
@@ -136,48 +139,63 @@ const ContactsList = () => {
         </InfoWithIcon>
       </ContactInfoItem>
     );
-  })
-}
+  });
+};
 
 export default function ContactUs() {
+  const params = useSearchParams();
+  const contactsParam = params.get('contactForm');
+
+  useEffect(() => {
+    if (contactsParam === 'true') {
+      scroller.scrollTo('contactForm', {
+        duration: 1500,
+        delay: 100,
+        smooth: true,
+        offset: -100,
+      });
+    }
+  }, [contactsParam]);
   return (
-    <StyledSection>
-      <StyledContainer>
-        <TextBlock>
-          <FormWrapper>
-            <StyledSubtitle>Contact Us</StyledSubtitle>
-            <StyledForm>
-              <input type="text" placeholder="Email" />
-              <input type="text" placeholder="Name" />
-              <textarea placeholder="Text" cols={30} rows={10}></textarea>
-              <button type="submit">Submit</button>
-            </StyledForm>
-          </FormWrapper>
-          <ContactInfoBlock>
-            <ContactsList/>
-          </ContactInfoBlock>
-        </TextBlock>
-        <DesktopContainer>
-          <ImagesBlock>
-            <ImageWrapper>
-              <Image
-                src="/images/contact_us_1.png"
-                width={630}
-                height={345}
-                alt="airfoto"
-              />
-            </ImageWrapper>
-            <ImageWrapper>
-              <Image
-                src="/images/contact_us_2.png"
-                width={630}
-                height={345}
-                alt="airfoto"
-              />
-            </ImageWrapper>
-          </ImagesBlock>
-        </DesktopContainer>
-      </StyledContainer>
-    </StyledSection>
+    <Element name="contactForm" className="element">
+      <StyledSection>
+        <StyledContainer>
+          <TextBlock>
+            <FormWrapper>
+              <StyledSubtitle>Contact Us</StyledSubtitle>
+              <StyledForm>
+                <input type="text" placeholder="Email" />
+                <input type="text" placeholder="Name" />
+                <textarea placeholder="Text" cols={30} rows={10}></textarea>
+                <button type="submit">Submit</button>
+              </StyledForm>
+            </FormWrapper>
+            <ContactInfoBlock>
+              <ContactsList />
+            </ContactInfoBlock>
+          </TextBlock>
+          <DesktopContainer>
+            <ImagesBlock>
+              <ImageWrapper>
+                <Image
+                  src="/images/contact_us_1.png"
+                  width={630}
+                  height={345}
+                  alt="airfoto"
+                />
+              </ImageWrapper>
+              <ImageWrapper>
+                <Image
+                  src="/images/contact_us_2.png"
+                  width={630}
+                  height={345}
+                  alt="airfoto"
+                />
+              </ImageWrapper>
+            </ImagesBlock>
+          </DesktopContainer>
+        </StyledContainer>
+      </StyledSection>
+    </Element>
   );
 }

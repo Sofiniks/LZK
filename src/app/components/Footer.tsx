@@ -44,6 +44,10 @@ const StyledContainer = styled(ContainerLayout)`
 `;
 
 const LogoWrapper = styled.div`
+  transition: ease-out 0.3s;
+  &:hover {
+    transform: scale(1.07);
+  }
   @media ${device.md} {
     margin-right: 40px;
   }
@@ -131,7 +135,14 @@ export default function Footer() {
       <DesktopContainer>
         <StyledContainer>
           <LogoWrapper>
-            <Image src="/images/logo.png" width={106} height={100} alt="logo" />
+            <Link href="/">
+              <Image
+                src="/images/logo.png"
+                width={106}
+                height={100}
+                alt="logo"
+              />
+            </Link>
           </LogoWrapper>
           <Navbar>
             <NavList>
@@ -175,12 +186,14 @@ export default function Footer() {
         <StyledContainer>
           <NavTop>
             <LogoWrapper>
-              <Image
-                src="/images/logo.png"
-                width={106}
-                height={100}
-                alt="logo"
-              />
+              <Link href="/">
+                <Image
+                  src="/images/logo.png"
+                  width={106}
+                  height={100}
+                  alt="logo"
+                />
+              </Link>
             </LogoWrapper>
             <Navbar>
               <NavList>
