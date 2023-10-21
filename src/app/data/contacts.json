@@ -3,10 +3,12 @@
         "title": "Liepaja Northen Shipyard Ltd",
         "address": "44D, Generala Baloza Str. Liepaja, LV-3402, Latvia",
         "registrationNumber": "Reg. Nr. LV42103093384",
-        "email": "office@lzk.lv"
+        "email": "office@lzk.lv",
+        "phone": ["+37125621976"]
     },
     {
-        "title": "SHIP AGENT ALVINA Ship Agency Ltd",
-        "email": "alvinaship@gmail.com"
+        "title": "SHIP AGENT \"ALVINA Ship Agency Ltd.\"",
+        "email": "alvinaship@gmail.com",
+        "phone": ["+37126531583","+37129468350"]
     }
 ]

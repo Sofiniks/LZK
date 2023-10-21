@@ -8,6 +8,7 @@ import ContainerLayout from '../../layouts/ContainerLayout';
 import { device, DesktopContainer } from '@/theme/breakpoints';
 import LocationIcon from '../../icons/LocationIcon';
 import EmailIcon from '../../icons/EmailIcon';
+import { Phone } from '../../icons/Phone';
 import contactsData from '../../../data/contacts.json';
 
 const StyledSection = styled.section`
@@ -32,7 +33,7 @@ const TextBlock = styled.div`
   }
 `;
 const StyledSubtitle = styled.h3`
-  font-size: 24px;
+  font-size: 22px;
   margin-bottom: 50px;
 `;
 const ImagesBlock = styled.div`
@@ -110,14 +111,13 @@ const InfoWithIcon = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 15px;
-  p {
+  p,
+  a {
     margin-bottom: 0;
+    margin-left: 7px;
   }
   &:last-of-type {
     margin-bottom: 0;
-  }
-  p {
-    margin-left: 7px;
   }
 `;
 
@@ -137,6 +137,14 @@ const ContactsList = () => {
           <EmailIcon />
           <p>{item.email}</p>
         </InfoWithIcon>
+        {item.phone.map((phoneItem, phoneIndex) => {
+          return (
+            <InfoWithIcon key={phoneIndex}>
+              <Phone />
+              <a href={`tel:${phoneItem}`}>{phoneItem}</a>
+            </InfoWithIcon>
+          );
+        })}
       </ContactInfoItem>
     );
   });
@@ -162,7 +170,7 @@ export default function ContactUs() {
         <StyledContainer>
           <TextBlock>
             <FormWrapper>
-              <StyledSubtitle>Contact Us</StyledSubtitle>
+              <StyledSubtitle>Feel free to contact us any time</StyledSubtitle>
               <StyledForm>
                 <input type="text" placeholder="Email" />
                 <input type="text" placeholder="Name" />
