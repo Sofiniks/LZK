@@ -4,6 +4,8 @@ import ContainerLayout from '../../layouts/ContainerLayout';
 import Image from 'next/image';
 import WhiteShip from '../../icons/WhiteShip';
 import Anchor from '../../icons/Anchor';
+import { DesktopContainer, TabletContainer } from '@/theme/breakpoints';
+import HistoryMobileSection from './HistoryMobileSection';
 
 const SectionWrapper = styled.div`
   margin-bottom: 120px;
@@ -291,124 +293,132 @@ const StyledYear = styled.h5`
 
 export default function HistorySection() {
   return (
-    <SectionWrapper>
-      <SectionHeading>
-        <StyledYear>2023</StyledYear>
-        <WhiteShip />
-      </SectionHeading>
-      <StyledContainer>
-        <SectionLeft>
-          <History2>
-            <StyledYear>1936</StyledYear>
-            <div>
-              <p>
-                In the beginning of the last century in the Yard’s workshops the
-                new kind of occupation was developed - repair and recondition of
-                air planes. In 1936 a whole line of planes was produced for a
-                new air squadron of Aizsargs (Latvian paramilitary
-                organization).
-              </p>
-              <Image
-                src="/images/history2.png"
-                width={215}
-                height={134}
-                alt="history"
-              />
-              <Anchor />
-            </div>
-          </History2>
-          <History4>
-            <Image
-              src="/images/history4.png"
-              width={196}
-              height={103}
-              alt="history"
-            />
-            <p>
-              Various details and mechanisms have been manu- factured in
-              mechanical and other workshops both for shiprepair and industrial
-              sector such as farming. Also ship’s and industrial steam boilers
-              have been fabricated...
-            </p>
-            <Anchor />
-          </History4>
-          <History6>
-            <div>
-              <StyledYear>1900</StyledYear>
-              <Image
-                src="/images/history6.png"
-                width={206}
-                height={154}
-                alt="history"
-              />
-            </div>
+    <>
+      <DesktopContainer>
+        <SectionWrapper>
+          <SectionHeading>
+            <StyledYear>2023</StyledYear>
+            <WhiteShip />
+          </SectionHeading>
+          <StyledContainer>
+            <SectionLeft>
+              <History2>
+                <StyledYear>1936</StyledYear>
+                <div>
+                  <p>
+                    In the beginning of the last century in the Yard’s workshops
+                    the new kind of occupation was developed - repair and
+                    recondition of air planes. In 1936 a whole line of planes
+                    was produced for a new air squadron of Aizsargs (Latvian
+                    paramilitary organization).
+                  </p>
+                  <Image
+                    src="/images/history2.png"
+                    width={215}
+                    height={134}
+                    alt="history"
+                  />
+                  <Anchor />
+                </div>
+              </History2>
+              <History4>
+                <Image
+                  src="/images/history4.png"
+                  width={196}
+                  height={103}
+                  alt="history"
+                />
+                <p>
+                  Various details and mechanisms have been manu- factured in
+                  mechanical and other workshops both for shiprepair and
+                  industrial sector such as farming. Also ship’s and industrial
+                  steam boilers have been fabricated...
+                </p>
+                <Anchor />
+              </History4>
+              <History6>
+                <div>
+                  <StyledYear>1900</StyledYear>
+                  <Image
+                    src="/images/history6.png"
+                    width={206}
+                    height={154}
+                    alt="history"
+                  />
+                </div>
 
-            <p>
-              The construction of two dry-docks into the military port’s
-              territory, and named in honour of Russian Empresses Maria and
-              Alexandra, was completed in 1900. Moreover new mechanical,
-              ship-repair and new building workshops have started to work in the
-              same year.
-            </p>
-            <Anchor />
-          </History6>
-        </SectionLeft>
-        <SectionRight>
-          <History1>
-            <Image
-              src="/images/history1.png"
-              width={227}
-              height={170}
-              alt="history"
-            />
-            <p>
-              In the Soviet period the Yard was the largest repair base of Navy
-              fleet at the Baltic Sea. Various naval vessels, service vessels
-              and submarines have been under repair in Yard’s docks or
-              re-equipped at berths. About 5 thousand of workers have been
-              engaged in the Yard’s workshops and repaired objects.
-            </p>
-            <Anchor />
-          </History1>
-          <History3>
-            <p>
-              In addition to the main activity some minor orders have been
-              performed at Yard in the thirties of the last century. Under the
-              order of government of the USSR about 60 goods wagons has been
-              constructed.
-            </p>
-            <Image
-              src="/images/history3.png"
-              width={204}
-              height={124}
-              alt="history"
-            />
-            <Anchor />
-          </History3>
-          <History5>
-            <Image
-              src="/images/history5.png"
-              width={200}
-              height={149}
-              alt="history"
-            />
-            <p>
-              For many years docking of vessels at Yard has been done by the
-              Maltese system.
-            </p>
-            <Anchor />
-          </History5>
-          <History7>
-            <StyledYear>1893</StyledYear>
-            <p>
-              The formal ceremony of the foundation stone’s laying of a new
-              naval base on the western outpost of the Russian Empire was held
-              on 12 August 1893 at the presence of the Emperor Alexander III.
-            </p>
-            <Anchor />
-          </History7>
-        </SectionRight>
-      </StyledContainer>
-    </SectionWrapper>
+                <p>
+                  The construction of two dry-docks into the military port’s
+                  territory, and named in honour of Russian Empresses Maria and
+                  Alexandra, was completed in 1900. Moreover new mechanical,
+                  ship-repair and new building workshops have started to work in
+                  the same year.
+                </p>
+                <Anchor />
+              </History6>
+            </SectionLeft>
+            <SectionRight>
+              <History1>
+                <Image
+                  src="/images/history1.png"
+                  width={227}
+                  height={170}
+                  alt="history"
+                />
+                <p>
+                  In the Soviet period the Yard was the largest repair base of
+                  Navy fleet at the Baltic Sea. Various naval vessels, service
+                  vessels and submarines have been under repair in Yard’s docks
+                  or re-equipped at berths. About 5 thousand of workers have
+                  been engaged in the Yard’s workshops and repaired objects.
+                </p>
+                <Anchor />
+              </History1>
+              <History3>
+                <p>
+                  In addition to the main activity some minor orders have been
+                  performed at Yard in the thirties of the last century. Under
+                  the order of government of the USSR about 60 goods wagons has
+                  been constructed.
+                </p>
+                <Image
+                  src="/images/history3.png"
+                  width={204}
+                  height={124}
+                  alt="history"
+                />
+                <Anchor />
+              </History3>
+              <History5>
+                <Image
+                  src="/images/history5.png"
+                  width={200}
+                  height={149}
+                  alt="history"
+                />
+                <p>
+                  For many years docking of vessels at Yard has been done by the
+                  Maltese system.
+                </p>
+                <Anchor />
+              </History5>
+              <History7>
+                <StyledYear>1893</StyledYear>
+                <p>
+                  The formal ceremony of the foundation stone’s laying of a new
+                  naval base on the western outpost of the Russian Empire was
+                  held on 12 August 1893 at the presence of the Emperor
+                  Alexander III.
+                </p>
+                <Anchor />
+              </History7>
+            </SectionRight>
+          </StyledContainer>
+        </SectionWrapper>
+      </DesktopContainer>
+      <TabletContainer>
+        <HistoryMobileSection/>
+      </TabletContainer>
+    </>
   );
 }
