@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { scroller, Element } from 'react-scroll';
 import { useSearchParams } from 'next/navigation';
 import ContainerLayout from '../../layouts/ContainerLayout';
-import { device, DesktopContainer } from '@/theme/breakpoints';
+import { device, DesktopContainer, TabletContainer } from '@/theme/breakpoints';
 import LocationIcon from '../../icons/LocationIcon';
 import EmailIcon from '../../icons/EmailIcon';
 import { Phone } from '../../icons/Phone';
@@ -21,6 +21,12 @@ const StyledContainer = styled(ContainerLayout)`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media ${device.md} {
+    flex-direction: column;
+  }
+`;
+const StyledTabletContainer = styled(TabletContainer)`
+width: 100%;
 `;
 const TextBlock = styled.div`
   @media ${device.lg} {
@@ -41,7 +47,7 @@ const ImagesBlock = styled.div`
   grid-template-columns: 1fr;
   gap: 20px;
   justify-items: center;
-  align-items: center;
+  align-items: flex-start;
 `;
 const ImageWrapper = styled.div`
   @media ${device.lg} {
@@ -49,6 +55,17 @@ const ImageWrapper = styled.div`
       width: 450px;
       height: auto;
     }
+  }
+`;
+const GoogleMapWrapper = styled.div`
+  width: 630px;
+  height: 345px;
+  @media ${device.lg} {
+    width: 450px;
+    height: 290px;
+  }
+  @media ${device.md} {
+    width: 100%;
   }
 `;
 const FormWrapper = styled.div`
@@ -91,7 +108,10 @@ const StyledForm = styled.form`
     }
   }
 `;
-const ContactInfoBlock = styled.div``;
+const ContactInfoBlock = styled.div`
+@media ${device.md}{
+  margin-bottom: 50px;
+}`;
 const ContactInfoItem = styled.div`
   margin-bottom: 30px;
   &:last-of-type {
@@ -200,8 +220,24 @@ export default function ContactUs() {
                   alt="airfoto"
                 />
               </ImageWrapper>
+              <GoogleMapWrapper>
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://maps.google.com/maps?width=100%25&amp;height=340&amp;hl=en&amp;q=44D,%20Generala%20Baloza%20Str.%20Liepaja,%20Latvia+(LZK)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                ></iframe>
+              </GoogleMapWrapper>
             </ImagesBlock>
           </DesktopContainer>
+          <StyledTabletContainer>
+            <GoogleMapWrapper>
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://maps.google.com/maps?width=100%25&amp;height=340&amp;hl=en&amp;q=44D,%20Generala%20Baloza%20Str.%20Liepaja,%20Latvia+(LZK)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              ></iframe>
+            </GoogleMapWrapper>
+          </StyledTabletContainer>
         </StyledContainer>
       </StyledSection>
     </Element>
