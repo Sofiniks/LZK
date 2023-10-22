@@ -6,9 +6,11 @@ import WhiteShip from '../../icons/WhiteShip';
 import Anchor from '../../icons/Anchor';
 import { DesktopContainer, TabletContainer } from '@/theme/breakpoints';
 import HistoryMobileSection from './HistoryMobileSection';
+import historyData from '../../../data/history.json';
+import { device } from '@/theme/breakpoints';
 
 const SectionWrapper = styled.div`
-  margin-bottom: 120px;
+  margin-bottom: 80px;
 `;
 const StyledContainer = styled(ContainerLayout)`
   display: flex;
@@ -17,7 +19,7 @@ const StyledContainer = styled(ContainerLayout)`
     content: '';
     position: absolute;
     width: 1px;
-    height: 100%;
+    height: calc(100% - 304px);
     top: 0;
     bottom: 0;
     right: 50%;
@@ -27,13 +29,6 @@ const StyledContainer = styled(ContainerLayout)`
 const SectionHeading = styled.div`
   display: flex;
   justify-content: center;
-  h5 {
-    transform: translateX(-50%);
-  }
-
-  svg {
-    transform: translateX(-70%);
-  }
 `;
 const SectionLeft = styled.div`
   padding-right: 80px;
@@ -52,242 +47,72 @@ const SectionRight = styled.div`
   align-items: flex-end;
 `;
 
-const History1 = styled.div`
-  display: flex;
-  margin-bottom: 230px;
+const HistoryItem = styled.div`
+  margin-bottom: 120px;
   position: relative;
   img {
-    margin-right: 10px;
+    width: 300px;
+    height: auto;
     object-fit: contain;
   }
   p {
     text-align: justify;
-  }
-  &:before {
-    content: '';
-    width: 80px;
-    height: 1px;
-    background-color: #fff;
-    position: absolute;
-    left: 0;
-    transform: translateX(-100%);
-    bottom: 50%;
-
+    max-width: 300px;
   }
   svg {
     position: absolute;
     z-index: 15;
     top: 50%;
-    left: -80px;
+    left: -300px;
     transform: translate(-50%, -50%);
-  }
-`;
-const History2 = styled.div`
-  margin-top: 200px;
-  margin-bottom: 290px;
-  h5 {
-    margin-bottom: 15px;
-  }
-  div {
-    display: flex;
-    height: auto;
-    position: relative;
-    &:before {
-      content: '';
-      width: 80px;
-      height: 1px;
-      background-color: #fff;
-      position: absolute;
-      right: 0;
-      transform: translateX(100%);
-      bottom: 50%;
+    @media ${device.lg} {
+      left: -182px;
     }
   }
-  p {
-    flex: 1;
-    text-align: justify;
-  }
-  img {
-    object-fit: cover;
-    height: 100%;
-    flex: 1;
-    margin-left: 10px;
-  }
-  svg {
-    position: absolute;
-    z-index: 15;
-    top: 50%;
-    right: -80px;
-    transform: translate(50%, -50%);
-  }
-`;
-const History3 = styled.div`
-  display: flex;
-  margin-bottom: 230px;
-  height: auto;
-  position: relative;
   &:before {
     content: '';
-    width: 80px;
+    width: 300px;
     height: 1px;
     background-color: #fff;
     position: absolute;
     left: 0;
     transform: translateX(-100%);
     bottom: 50%;
-  }
-  p {
-    flex: 1;
-    text-align: justify;
-  }
-  img {
-    object-fit: cover;
-    height: 100%;
-    flex: 1;
-    margin-left: 10px;
-  }
-  svg {
-    position: absolute;
-    z-index: 15;
-    top: 50%;
-    left: -80px;
-    transform: translate(-50%, -50%);
+    @media ${device.lg} {
+      width: 180px;
+    }
   }
 `;
-const History4 = styled.div`
-  display: flex;
-  margin-bottom: 230px;
-  height: auto;
-  position: relative;
+const HistoryItemLeft = styled(HistoryItem)`
   &:before {
     content: '';
-    width: 80px;
-    height: 1px;
-    background-color: #fff;
-    position: absolute;
     right: 0;
-    transform: translateX(100%);
-    bottom: 50%;
-  }
-  p {
-    flex: 1;
-    text-align: justify;
-  }
-  img {
-    object-fit: cover;
-    height: 100%;
-    flex: 1;
-    margin-right: 10px;
+    left: unset;
+    transform: translateX(80px);
   }
   svg {
     position: absolute;
     z-index: 15;
     top: 50%;
     right: -80px;
+    left: unset;
     transform: translate(50%, -50%);
   }
 `;
-const History5 = styled.div`
-  display: flex;
-  max-width: 200px;
-  margin-bottom: 210px;
-  flex-direction: column;
-  align-self: flex-start;
-  position: relative;
-  &:before {
-    content: '';
-    width: 80px;
-    height: 1px;
-    background-color: #fff;
-    position: absolute;
-    left: 0;
-    transform: translateX(-100%);
-    bottom: 50%;
-  }
-  p {
-    text-align: justify;
-    margin-top: 10px;
-  }
-  svg {
-    position: absolute;
-    z-index: 15;
-    top: 50%;
-    left: -80px;
-    transform: translate(-50%, -50%);
-  }
-`;
-const History6 = styled.div`
-  display: flex;
-  flex-direction: column;
-  max-width: 440px;
-  position: relative;
-  &:before {
-    content: '';
-    width: 160px;
-    height: 1px;
-    background-color: #fff;
-    position: absolute;
-    right: 0;
-    transform: translateX(100%);
-    bottom: 50%;
-  }
-  div {
-    display: flex;
-    margin-bottom: 10px;
-    align-items: flex-end;
-  }
-  img {
-    flex: 1;
-    object-fit: cover;
-    height: 100%;
-  }
-  h5 {
-    margin-right: 10px;
-    padding-bottom: 10px;
-    width: 30%;
-  }
-  p {
-    text-align: justify;
-  }
-  svg {
-    position: absolute;
-    z-index: 15;
-    top: 50%;
-    right: -160px;
-    transform: translate(50%, -50%);
-  }
+const HistoryItem2 = styled(HistoryItemLeft)`
+  margin-top: 230px;
 `;
 
-const History7 = styled.div`
-  display: flex;
-  max-width: 330px;
-  flex-direction: column;
-  position: relative;
-  &:before {
-    content: '';
-    width: 270px;
-    height: 1px;
-    background-color: #fff;
-    position: absolute;
-    left: 0;
-    transform: translateX(-100%);
-    bottom: 0;
-  }
-  p {
-    text-align: justify;
-    margin-top: 15px;
-  }
-  svg {
-    position: absolute;
-    z-index: 15;
-    bottom: 0;
-    left: -270px;
-    transform: translate(-50%, 50%);
-  }
+const HistoryItem4 = styled(HistoryItemLeft)`
+  margin-bottom: 200px;
+`;
+
+const HistoryItem10 = styled(HistoryItemLeft)`
+  margin-bottom: 200px;
 `;
 
 const StyledYear = styled.h5`
-  font-size: 48px;
+  font-size: 40px;
   color: rgba(255, 255, 255, 0.5);
 `;
 
@@ -297,128 +122,608 @@ export default function HistorySection() {
       <DesktopContainer>
         <SectionWrapper>
           <SectionHeading>
-            <StyledYear>2023</StyledYear>
             <WhiteShip />
           </SectionHeading>
           <StyledContainer>
             <SectionLeft>
-              <History2>
-                <StyledYear>1936</StyledYear>
-                <div>
-                  <p>
-                    In the beginning of the last century in the Yard’s workshops
-                    the new kind of occupation was developed - repair and
-                    recondition of air planes. In 1936 a whole line of planes
-                    was produced for a new air squadron of Aizsargs (Latvian
-                    paramilitary organization).
-                  </p>
-                  <Image
-                    src="/images/history2.png"
-                    width={215}
-                    height={134}
-                    alt="history"
-                  />
-                  <Anchor />
-                </div>
-              </History2>
-              <History4>
+              <HistoryItem2>
+                <StyledYear>{historyData[1].year}</StyledYear>
                 <Image
-                  src="/images/history4.png"
-                  width={196}
-                  height={103}
+                  src={`/images/${historyData[1].image}`}
+                  width={215}
+                  height={134}
                   alt="history"
                 />
-                <p>
-                  Various details and mechanisms have been manu- factured in
-                  mechanical and other workshops both for shiprepair and
-                  industrial sector such as farming. Also ship’s and industrial
-                  steam boilers have been fabricated...
-                </p>
+                <p>{historyData[1].text}</p>
                 <Anchor />
-              </History4>
-              <History6>
-                <div>
-                  <StyledYear>1900</StyledYear>
-                  <Image
-                    src="/images/history6.png"
-                    width={206}
-                    height={154}
-                    alt="history"
-                  />
-                </div>
-
-                <p>
-                  The construction of two dry-docks into the military port’s
-                  territory, and named in honour of Russian Empresses Maria and
-                  Alexandra, was completed in 1900. Moreover new mechanical,
-                  ship-repair and new building workshops have started to work in
-                  the same year.
-                </p>
+              </HistoryItem2>
+              <HistoryItem4>
+                <StyledYear>{historyData[3].year}</StyledYear>
+                <Image
+                  src={`/images/${historyData[3].image}`}
+                  width={215}
+                  height={134}
+                  alt="history"
+                />
+                <p>{historyData[3].text}</p>
                 <Anchor />
-              </History6>
+              </HistoryItem4>
+              <HistoryItemLeft>
+                <StyledYear>{historyData[5].year}</StyledYear>
+                <Image
+                  src={`/images/${historyData[5].image}`}
+                  width={215}
+                  height={134}
+                  alt="history"
+                />
+                <p>{historyData[5].text}</p>
+                <Anchor />
+              </HistoryItemLeft>
+              <HistoryItemLeft>
+                <StyledYear>{historyData[7].year}</StyledYear>
+                <Image
+                  src={`/images/${historyData[7].image}`}
+                  width={215}
+                  height={134}
+                  alt="history"
+                />
+                <p>{historyData[7].text}</p>
+                <Anchor />
+              </HistoryItemLeft>
+              <HistoryItem10>
+                <StyledYear>{historyData[9].year}</StyledYear>
+                <Image
+                  src={`/images/${historyData[9].image}`}
+                  width={215}
+                  height={134}
+                  alt="history"
+                />
+                <p>{historyData[9].text}</p>
+                <Anchor />
+              </HistoryItem10>
+              <HistoryItemLeft>
+                <StyledYear>{historyData[11].year}</StyledYear>
+                <Image
+                  src={`/images/${historyData[11].image}`}
+                  width={215}
+                  height={134}
+                  alt="history"
+                />
+                <p>{historyData[11].text}</p>
+                <Anchor />
+              </HistoryItemLeft>
+              <HistoryItemLeft>
+                <StyledYear>{historyData[13].year}</StyledYear>
+                <Image
+                  src={`/images/${historyData[13].image}`}
+                  width={215}
+                  height={134}
+                  alt="history"
+                />
+                <p>{historyData[13].text}</p>
+                <Anchor />
+              </HistoryItemLeft>
             </SectionLeft>
             <SectionRight>
-              <History1>
+              <HistoryItem>
+                <StyledYear>{historyData[0].year}</StyledYear>
                 <Image
-                  src="/images/history1.png"
-                  width={227}
-                  height={170}
+                  src={`/images/${historyData[0].image}`}
+                  width={215}
+                  height={134}
                   alt="history"
                 />
-                <p>
-                  In the Soviet period the Yard was the largest repair base of
-                  Navy fleet at the Baltic Sea. Various naval vessels, service
-                  vessels and submarines have been under repair in Yard’s docks
-                  or re-equipped at berths. About 5 thousand of workers have
-                  been engaged in the Yard’s workshops and repaired objects.
-                </p>
+                <p>{historyData[0].text}</p>
                 <Anchor />
-              </History1>
-              <History3>
-                <p>
-                  In addition to the main activity some minor orders have been
-                  performed at Yard in the thirties of the last century. Under
-                  the order of government of the USSR about 60 goods wagons has
-                  been constructed.
-                </p>
+              </HistoryItem>
+              <HistoryItem>
+                <StyledYear>{historyData[2].year}</StyledYear>
                 <Image
-                  src="/images/history3.png"
-                  width={204}
-                  height={124}
+                  src={`/images/${historyData[2].image}`}
+                  width={215}
+                  height={134}
                   alt="history"
                 />
+                <p>{historyData[2].text}</p>
                 <Anchor />
-              </History3>
-              <History5>
+              </HistoryItem>
+              <HistoryItem>
+                <StyledYear>{historyData[4].year}</StyledYear>
                 <Image
-                  src="/images/history5.png"
-                  width={200}
-                  height={149}
+                  src={`/images/${historyData[4].image}`}
+                  width={215}
+                  height={134}
                   alt="history"
                 />
-                <p>
-                  For many years docking of vessels at Yard has been done by the
-                  Maltese system.
-                </p>
+                <p>{historyData[4].text}</p>
                 <Anchor />
-              </History5>
-              <History7>
-                <StyledYear>1893</StyledYear>
-                <p>
-                  The formal ceremony of the foundation stone’s laying of a new
-                  naval base on the western outpost of the Russian Empire was
-                  held on 12 August 1893 at the presence of the Emperor
-                  Alexander III.
-                </p>
+              </HistoryItem>
+              <HistoryItem>
+                <StyledYear>{historyData[6].year}</StyledYear>
+                <Image
+                  src={`/images/${historyData[6].image}`}
+                  width={215}
+                  height={134}
+                  alt="history"
+                />
+                <p>{historyData[6].text}</p>
                 <Anchor />
-              </History7>
+              </HistoryItem>
+              <HistoryItem>
+                <StyledYear>{historyData[8].year}</StyledYear>
+                <Image
+                  src={`/images/${historyData[8].image}`}
+                  width={215}
+                  height={134}
+                  alt="history"
+                />
+                <p>{historyData[8].text}</p>
+                <Anchor />
+              </HistoryItem>
+              <HistoryItem>
+                <StyledYear>{historyData[10].year}</StyledYear>
+                <Image
+                  src={`/images/${historyData[10].image}`}
+                  width={215}
+                  height={134}
+                  alt="history"
+                />
+                <p>{historyData[10].text}</p>
+                <Anchor />
+              </HistoryItem>
+              <HistoryItem>
+                <StyledYear>{historyData[12].year}</StyledYear>
+                <Image
+                  src={`/images/${historyData[12].image}`}
+                  width={215}
+                  height={134}
+                  alt="history"
+                />
+                <p>{historyData[12].text}</p>
+                <Anchor />
+              </HistoryItem>
+              <HistoryItem>
+                <StyledYear>{historyData[14].year}</StyledYear>
+                <Image
+                  src={`/images/${historyData[14].image}`}
+                  width={215}
+                  height={134}
+                  alt="history"
+                />
+                <p>{historyData[14].text}</p>
+                <Anchor />
+              </HistoryItem>
             </SectionRight>
           </StyledContainer>
         </SectionWrapper>
       </DesktopContainer>
       <TabletContainer>
-        <HistoryMobileSection/>
+        <HistoryMobileSection />
       </TabletContainer>
     </>
   );
 }
+// 'use client';
+// import styled from 'styled-components';
+// import ContainerLayout from '../../layouts/ContainerLayout';
+// import Image from 'next/image';
+// import WhiteShip from '../../icons/WhiteShip';
+// import Anchor from '../../icons/Anchor';
+// import { DesktopContainer, TabletContainer } from '@/theme/breakpoints';
+// import HistoryMobileSection from './HistoryMobileSection';
+
+// const SectionWrapper = styled.div`
+//   margin-bottom: 120px;
+// `;
+// const StyledContainer = styled(ContainerLayout)`
+//   display: flex;
+//   position: relative;
+//   &:after {
+//     content: '';
+//     position: absolute;
+//     width: 1px;
+//     height: 100%;
+//     top: 0;
+//     bottom: 0;
+//     right: 50%;
+//     background-color: #fff;
+//   }
+// `;
+// const SectionHeading = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   h5 {
+//     transform: translateX(-50%);
+//   }
+
+//   svg {
+//     transform: translateX(-70%);
+//   }
+// `;
+// const SectionLeft = styled.div`
+//   padding-right: 80px;
+//   width: 50%;
+//   font-size: 14px;
+//   line-height: 155%;
+// `;
+// const SectionRight = styled.div`
+//   padding-left: 80px;
+//   width: 50%;
+//   font-size: 14px;
+//   line-height: 155%;
+//   display: flex;
+//   justify-content: flex-end;
+//   flex-direction: column;
+//   align-items: flex-end;
+// `;
+
+// const History1 = styled.div`
+//   display: flex;
+//   margin-bottom: 230px;
+//   position: relative;
+//   img {
+//     margin-right: 10px;
+//     object-fit: contain;
+//   }
+//   p {
+//     text-align: justify;
+//   }
+//   &:before {
+//     content: '';
+//     width: 80px;
+//     height: 1px;
+//     background-color: #fff;
+//     position: absolute;
+//     left: 0;
+//     transform: translateX(-100%);
+//     bottom: 50%;
+
+//   }
+//   svg {
+//     position: absolute;
+//     z-index: 15;
+//     top: 50%;
+//     left: -80px;
+//     transform: translate(-50%, -50%);
+//   }
+// `;
+// const History2 = styled.div`
+//   margin-top: 200px;
+//   margin-bottom: 290px;
+//   h5 {
+//     margin-bottom: 15px;
+//   }
+//   div {
+//     display: flex;
+//     height: auto;
+//     position: relative;
+//     &:before {
+//       content: '';
+//       width: 80px;
+//       height: 1px;
+//       background-color: #fff;
+//       position: absolute;
+//       right: 0;
+//       transform: translateX(100%);
+//       bottom: 50%;
+//     }
+//   }
+//   p {
+//     flex: 1;
+//     text-align: justify;
+//   }
+//   img {
+//     object-fit: cover;
+//     height: 100%;
+//     flex: 1;
+//     margin-left: 10px;
+//   }
+//   svg {
+//     position: absolute;
+//     z-index: 15;
+//     top: 50%;
+//     right: -80px;
+//     transform: translate(50%, -50%);
+//   }
+// `;
+// const History3 = styled.div`
+//   display: flex;
+//   margin-bottom: 230px;
+//   height: auto;
+//   position: relative;
+//   &:before {
+//     content: '';
+//     width: 80px;
+//     height: 1px;
+//     background-color: #fff;
+//     position: absolute;
+//     left: 0;
+//     transform: translateX(-100%);
+//     bottom: 50%;
+//   }
+//   p {
+//     flex: 1;
+//     text-align: justify;
+//   }
+//   img {
+//     object-fit: cover;
+//     height: 100%;
+//     flex: 1;
+//     margin-left: 10px;
+//   }
+//   svg {
+//     position: absolute;
+//     z-index: 15;
+//     top: 50%;
+//     left: -80px;
+//     transform: translate(-50%, -50%);
+//   }
+// `;
+// const History4 = styled.div`
+//   display: flex;
+//   margin-bottom: 230px;
+//   height: auto;
+//   position: relative;
+//   &:before {
+//     content: '';
+//     width: 80px;
+//     height: 1px;
+//     background-color: #fff;
+//     position: absolute;
+//     right: 0;
+//     transform: translateX(100%);
+//     bottom: 50%;
+//   }
+//   p {
+//     flex: 1;
+//     text-align: justify;
+//   }
+//   img {
+//     object-fit: cover;
+//     height: 100%;
+//     flex: 1;
+//     margin-right: 10px;
+//   }
+//   svg {
+//     position: absolute;
+//     z-index: 15;
+//     top: 50%;
+//     right: -80px;
+//     transform: translate(50%, -50%);
+//   }
+// `;
+// const History5 = styled.div`
+//   display: flex;
+//   max-width: 200px;
+//   margin-bottom: 210px;
+//   flex-direction: column;
+//   align-self: flex-start;
+//   position: relative;
+//   &:before {
+//     content: '';
+//     width: 80px;
+//     height: 1px;
+//     background-color: #fff;
+//     position: absolute;
+//     left: 0;
+//     transform: translateX(-100%);
+//     bottom: 50%;
+//   }
+//   p {
+//     text-align: justify;
+//     margin-top: 10px;
+//   }
+//   svg {
+//     position: absolute;
+//     z-index: 15;
+//     top: 50%;
+//     left: -80px;
+//     transform: translate(-50%, -50%);
+//   }
+// `;
+// const History6 = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   max-width: 440px;
+//   position: relative;
+//   &:before {
+//     content: '';
+//     width: 160px;
+//     height: 1px;
+//     background-color: #fff;
+//     position: absolute;
+//     right: 0;
+//     transform: translateX(100%);
+//     bottom: 50%;
+//   }
+//   div {
+//     display: flex;
+//     margin-bottom: 10px;
+//     align-items: flex-end;
+//   }
+//   img {
+//     flex: 1;
+//     object-fit: cover;
+//     height: 100%;
+//   }
+//   h5 {
+//     margin-right: 10px;
+//     padding-bottom: 10px;
+//     width: 30%;
+//   }
+//   p {
+//     text-align: justify;
+//   }
+//   svg {
+//     position: absolute;
+//     z-index: 15;
+//     top: 50%;
+//     right: -160px;
+//     transform: translate(50%, -50%);
+//   }
+// `;
+
+// const History7 = styled.div`
+//   display: flex;
+//   max-width: 330px;
+//   flex-direction: column;
+//   position: relative;
+//   &:before {
+//     content: '';
+//     width: 270px;
+//     height: 1px;
+//     background-color: #fff;
+//     position: absolute;
+//     left: 0;
+//     transform: translateX(-100%);
+//     bottom: 0;
+//   }
+//   p {
+//     text-align: justify;
+//     margin-top: 15px;
+//   }
+//   svg {
+//     position: absolute;
+//     z-index: 15;
+//     bottom: 0;
+//     left: -270px;
+//     transform: translate(-50%, 50%);
+//   }
+// `;
+
+// const StyledYear = styled.h5`
+//   font-size: 48px;
+//   color: rgba(255, 255, 255, 0.5);
+// `;
+
+// export default function HistorySection() {
+//   return (
+//     <>
+//       <DesktopContainer>
+//         <SectionWrapper>
+//           <SectionHeading>
+//             <StyledYear>2023</StyledYear>
+//             <WhiteShip />
+//           </SectionHeading>
+//           <StyledContainer>
+//             <SectionLeft>
+//               <History2>
+//                 <StyledYear>1936</StyledYear>
+//                 <div>
+//                   <p>
+//                     In the beginning of the last century in the Yard’s workshops
+//                     the new kind of occupation was developed - repair and
+//                     recondition of air planes. In 1936 a whole line of planes
+//                     was produced for a new air squadron of Aizsargs (Latvian
+//                     paramilitary organization).
+//                   </p>
+//                   <Image
+//                     src="/images/history2.png"
+//                     width={215}
+//                     height={134}
+//                     alt="history"
+//                   />
+//                   <Anchor />
+//                 </div>
+//               </History2>
+//               <History4>
+//                 <Image
+//                   src="/images/history4.png"
+//                   width={196}
+//                   height={103}
+//                   alt="history"
+//                 />
+//                 <p>
+//                   Various details and mechanisms have been manu- factured in
+//                   mechanical and other workshops both for shiprepair and
+//                   industrial sector such as farming. Also ship’s and industrial
+//                   steam boilers have been fabricated...
+//                 </p>
+//                 <Anchor />
+//               </History4>
+//               <History6>
+//                 <div>
+//                   <StyledYear>1900</StyledYear>
+//                   <Image
+//                     src="/images/history6.png"
+//                     width={206}
+//                     height={154}
+//                     alt="history"
+//                   />
+//                 </div>
+
+//                 <p>
+//                   The construction of two dry-docks into the military port’s
+//                   territory, and named in honour of Russian Empresses Maria and
+//                   Alexandra, was completed in 1900. Moreover new mechanical,
+//                   ship-repair and new building workshops have started to work in
+//                   the same year.
+//                 </p>
+//                 <Anchor />
+//               </History6>
+//             </SectionLeft>
+//             <SectionRight>
+//               <History1>
+//                 <Image
+//                   src="/images/history1.png"
+//                   width={227}
+//                   height={170}
+//                   alt="history"
+//                 />
+//                 <p>
+//                   In the Soviet period the Yard was the largest repair base of
+//                   Navy fleet at the Baltic Sea. Various naval vessels, service
+//                   vessels and submarines have been under repair in Yard’s docks
+//                   or re-equipped at berths. About 5 thousand of workers have
+//                   been engaged in the Yard’s workshops and repaired objects.
+//                 </p>
+//                 <Anchor />
+//               </History1>
+//               <History3>
+//                 <p>
+//                   In addition to the main activity some minor orders have been
+//                   performed at Yard in the thirties of the last century. Under
+//                   the order of government of the USSR about 60 goods wagons has
+//                   been constructed.
+//                 </p>
+//                 <Image
+//                   src="/images/history3.png"
+//                   width={204}
+//                   height={124}
+//                   alt="history"
+//                 />
+//                 <Anchor />
+//               </History3>
+//               <History5>
+//                 <Image
+//                   src="/images/history5.png"
+//                   width={200}
+//                   height={149}
+//                   alt="history"
+//                 />
+//                 <p>
+//                   For many years docking of vessels at Yard has been done by the
+//                   Maltese system.
+//                 </p>
+//                 <Anchor />
+//               </History5>
+//               <History7>
+//                 <StyledYear>1893</StyledYear>
+//                 <p>
+//                   The formal ceremony of the foundation stone’s laying of a new
+//                   naval base on the western outpost of the Russian Empire was
+//                   held on 12 August 1893 at the presence of the Emperor
+//                   Alexander III.
+//                 </p>
+//                 <Anchor />
+//               </History7>
+//             </SectionRight>
+//           </StyledContainer>
+//         </SectionWrapper>
+//       </DesktopContainer>
+//       <TabletContainer>
+//         <HistoryMobileSection/>
+//       </TabletContainer>
+//     </>
+//   );
+// }
