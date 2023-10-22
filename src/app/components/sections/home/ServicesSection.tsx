@@ -1,6 +1,7 @@
 'use client';
 import styled from 'styled-components';
 import Image from 'next/image';
+import Link from 'next/link';
 import ContainerLayout from '../../layouts/ContainerLayout';
 import { device } from '@/theme/breakpoints';
 
@@ -46,6 +47,18 @@ const SectionContent = styled.div`
 `;
 const ImageWrapper = styled.div`
   position: relative;
+  cursor: pointer;
+  &:after {
+    content: '';
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: rgba(0,0,0,.35);
+    }
   @media ${device.lg} {
     img {
       width: 400px;
@@ -69,6 +82,7 @@ const StyledHeading = styled.h4`
   text-transform: uppercase;
   font-weight: 700;
   white-space: nowrap;
+  z-index: 15;
   @media ${device.sm} {
     font-size: 30px;
   }
@@ -95,21 +109,27 @@ export default function ServicesSection() {
         <ContainerLayout>
           <SectionContent>
             <ImageWrapper>
-              <Image
-                src="/images/services1.png"
-                height={500}
-                width={500}
-                alt="Our services"
-              />
+              <Link href="/services">
+                <Image
+                  src="/images/services1.jpg"
+                  height={500}
+                  width={500}
+                  alt="Our services"
+                />
+              </Link>
+
               <StyledHeading>Ship Repair</StyledHeading>
             </ImageWrapper>
             <ImageWrapper>
-              <Image
-                src="/images/services2.png"
-                height={500}
-                width={500}
-                alt="Our services"
-              />
+              <Link href="/contacts">
+                <Image
+                  src="/images/services2.jpg"
+                  height={500}
+                  width={500}
+                  alt="Our services"
+                />
+              </Link>
+
               <StyledHeading>Shipbuilding</StyledHeading>
             </ImageWrapper>
           </SectionContent>

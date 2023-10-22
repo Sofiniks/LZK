@@ -58,7 +58,7 @@ export default function HeroSection({ title }: { title: string }) {
     <SectionWrapper>
       <SectionBackground
         $url="/images/hero.png"
-        $urlMobile="/images/mobile_hero.png"
+        $urlMobile="/images/heroMobile.png"
       >
         <SectionContent>
           <h1>{title}</h1>
