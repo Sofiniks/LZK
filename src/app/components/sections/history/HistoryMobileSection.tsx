@@ -2,6 +2,10 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 import ContainerLayout from '../../layouts/ContainerLayout';
+import historyData from '../../../data/history.json';
+import WhiteShip from '../../icons/WhiteShip';
+import Anchor from '../../icons/Anchor';
+import { device } from '@/theme/breakpoints';
 
 const SectionWrapper = styled.div``;
 const StyledContainer = styled(ContainerLayout)`
@@ -11,7 +15,10 @@ const StyledContainer = styled(ContainerLayout)`
   justify-content: center;
   align-items: center;
   position: relative;
-  max-width: 270px;
+  max-width: 400px;
+  @media ${device.sm} {
+    max-width: 300px;
+  }
   &:before {
     content: '';
     width: 1px;
@@ -20,16 +27,79 @@ const StyledContainer = styled(ContainerLayout)`
     background-color: #fff;
     position: absolute;
     top: 50px;
-    bottom: 400px;
+    bottom: 500px;
     left: 0;
+    @media ${device.sm} {
+      left: -20px;
+    }
   }
 `;
 const HistoryItem = styled.div`
   margin-bottom: 60px;
-  max-width: 240px;
+  max-width: 400px;
+  position: relative;
   p,
   img {
     margin-bottom: 15px;
+  }
+  img {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+  }
+  p {
+    text-align: justify;
+    max-width: 300px;
+  }
+  svg {
+    position: absolute;
+    z-index: 15;
+    top: 0;
+    left: -68px;
+    transform: translate(-50%, 50%);
+    @media ${device.sm} {
+      left: -38px;
+    }
+  }
+  &:before {
+    content: '';
+    width: 90%;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    left: -68px;
+    top: 25px;
+    @media ${device.sm} {
+      left: -38px;
+      width: 80%;
+    }
+  }
+  &:last-of-type {
+    &:before {
+      width: 80px;
+      top: unset;
+      bottom: 50%;
+      z-index: -1;
+    }
+    svg {
+      top: unset;
+      bottom: 50%;
+    }
+  }
+  @media ${device.sm} {
+    max-width: 300px;
+  }
+`;
+const HistoryItemWithoutYear = styled(HistoryItem)`
+  svg {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &:before {
+    top: unset;
+    bottom: 50%;
+    width: 80px;
+    z-index: -1;
   }
 `;
 const StyledHeading = styled.div`
@@ -37,12 +107,19 @@ const StyledHeading = styled.div`
   display: flex;
   justify-content: flex-start;
   width: 100%;
+  transform: translate(-50px, -5px);
+  z-index: 15;
+  @media ${device.sm} {
+    transform: translate(-70px, -5px);
+  }
 `;
 
 const StyledYear = styled.h3`
   color: rgba(255, 255, 255, 0.5);
   font-size: 32px;
   font-weight: 500;
+  text-align: right;
+  margin-bottom: 10px;
 `;
 
 export default function HistoryMobileSection() {
@@ -50,98 +127,172 @@ export default function HistoryMobileSection() {
     <SectionWrapper>
       <StyledContainer>
         <StyledHeading>
-          <StyledYear>2023</StyledYear>
+          <WhiteShip />
         </StyledHeading>
         <HistoryItem>
+          <StyledYear>{historyData[0].year}</StyledYear>
           <Image
-            src="/images/history1.png"
+            src={`/images/${historyData[0].image}`}
             width={227}
             height={170}
             alt="history"
           />
-          <p>
-            In the Soviet period the Yard was the largest repair base of Navy
-            fleet at the Baltic Sea. Various naval vessels, service vessels and
-            submarines have been under repair in Yard’s docks or re-equipped at
-            berths. About 5 thousand of workers have been engaged in the Yard’s
-            workshops and repaired objects.
-          </p>
+          <p>{historyData[0].text}</p>
+          <Anchor />
         </HistoryItem>
         <HistoryItem>
-          <p>
-            In the beginning of the last century in the Yard’s workshops the new
-            kind of occupation was developed - repair and recondition of air
-            planes. In 1936 a whole line of planes was produced for a new air
-            squadron of Aizsargs (Latvian paramilitary organization).
-          </p>
+          <StyledYear>{historyData[1].year}</StyledYear>
           <Image
-            src="/images/history2.png"
-            width={238}
-            height={148}
+            src={`/images/${historyData[1].image}`}
+            width={227}
+            height={170}
             alt="history"
           />
+          <p>{historyData[1].text}</p>
+          <Anchor />
         </HistoryItem>
         <HistoryItem>
-          <p>
-            In addition to the main activity some minor orders have been
-            performed at Yard in the thirties of the last century. Under the
-            order of government of the USSR about 60 goods wagons has been
-            constructed.
-          </p>
+          <StyledYear>{historyData[2].year}</StyledYear>
           <Image
-            src="/images/history3.png"
-            width={242}
-            height={147}
+            src={`/images/${historyData[2].image}`}
+            width={227}
+            height={170}
             alt="history"
           />
+          <p>{historyData[2].text}</p>
+          <Anchor />
         </HistoryItem>
         <HistoryItem>
-          <p>
-            Various details and mechanisms have been manu- factured in
-            mechanical and other workshops both for shiprepair and industrial
-            sector such as farming. Also ship’s and industrial steam boilers
-            have been fabricated...
-          </p>
+          <StyledYear>{historyData[3].year}</StyledYear>
           <Image
-            src="/images/history4.png"
-            width={242}
-            height={127}
+            src={`/images/${historyData[3].image}`}
+            width={227}
+            height={170}
             alt="history"
           />
+          <p>{historyData[3].text}</p>
+          <Anchor />
         </HistoryItem>
         <HistoryItem>
-          <p>
-            For many years docking of vessels at Yard has been done by the
-            Maltese system.
-          </p>
+          <StyledYear>{historyData[4].year}</StyledYear>
           <Image
-            src="/images/history5.png"
-            width={200}
-            height={149}
+            src={`/images/${historyData[4].image}`}
+            width={227}
+            height={170}
             alt="history"
           />
+          <p>{historyData[4].text}</p>
+          <Anchor />
         </HistoryItem>
         <HistoryItem>
+          <StyledYear>{historyData[5].year}</StyledYear>
           <Image
-            src="/images/history6.png"
-            width={206}
-            height={154}
+            src={`/images/${historyData[5].image}`}
+            width={227}
+            height={170}
             alt="history"
           />
-          <p>
-            The construction of two dry-docks into the military port’s
-            territory, and named in honour of Russian Empresses Maria and
-            Alexandra, was completed in 1900. Moreover new mechanical,
-            ship-repair and new building workshops have started to work in the
-            same year.
-          </p>
+          <p>{historyData[5].text}</p>
+          <Anchor />
+        </HistoryItem>
+        <HistoryItemWithoutYear>
+          <StyledYear>{historyData[6].year}</StyledYear>
+          <Image
+            src={`/images/${historyData[6].image}`}
+            width={227}
+            height={170}
+            alt="history"
+          />
+          <p>{historyData[6].text}</p>
+          <Anchor />
+        </HistoryItemWithoutYear>
+        <HistoryItemWithoutYear>
+          <StyledYear>{historyData[7].year}</StyledYear>
+          <Image
+            src={`/images/${historyData[7].image}`}
+            width={227}
+            height={170}
+            alt="history"
+          />
+          <p>{historyData[7].text}</p>
+          <Anchor />
+        </HistoryItemWithoutYear>
+        <HistoryItem>
+          <StyledYear>{historyData[8].year}</StyledYear>
+          <Image
+            src={`/images/${historyData[8].image}`}
+            width={227}
+            height={170}
+            alt="history"
+          />
+          <p>{historyData[8].text}</p>
+          <Anchor />
         </HistoryItem>
         <HistoryItem>
-          <p>
-            The formal ceremony of the foundation stone’s laying of a new naval
-            base on the western outpost of the Russian Empire was held on 12
-            August 1893 at the presence of the Emperor Alexander III.
-          </p>
+          <StyledYear>{historyData[9].year}</StyledYear>
+          <Image
+            src={`/images/${historyData[9].image}`}
+            width={227}
+            height={170}
+            alt="history"
+          />
+          <p>{historyData[9].text}</p>
+          <Anchor />
+        </HistoryItem>
+        <HistoryItem>
+          <StyledYear>{historyData[10].year}</StyledYear>
+          <Image
+            src={`/images/${historyData[10].image}`}
+            width={227}
+            height={170}
+            alt="history"
+          />
+          <p>{historyData[10].text}</p>
+          <Anchor />
+        </HistoryItem>
+        <HistoryItemWithoutYear>
+          <StyledYear>{historyData[11].year}</StyledYear>
+          <Image
+            src={`/images/${historyData[11].image}`}
+            width={227}
+            height={170}
+            alt="history"
+          />
+          <p>{historyData[11].text}</p>
+          <Anchor />
+        </HistoryItemWithoutYear>
+        <HistoryItemWithoutYear>
+          <StyledYear>{historyData[12].year}</StyledYear>
+          <Image
+            src={`/images/${historyData[12].image}`}
+            width={227}
+            height={170}
+            alt="history"
+          />
+          <p>{historyData[12].text}</p>
+          <Anchor />
+        </HistoryItemWithoutYear>
+        <HistoryItem>
+          <StyledYear>{historyData[13].year}</StyledYear>
+          <Image
+            src={`/images/${historyData[13].image}`}
+            width={227}
+            height={170}
+            alt="history"
+          />
+          <p>{historyData[13].text}</p>
+          <Anchor />
+        </HistoryItem>
+        <HistoryItem>
+          <StyledYear>{historyData[14].year}</StyledYear>
+          <Image
+            src={`/images/${historyData[14].image}`}
+            width={227}
+            height={170}
+            alt="history"
+          />
+          <p>{historyData[14].text}</p>
+          <Anchor />
         </HistoryItem>
       </StyledContainer>
     </SectionWrapper>
