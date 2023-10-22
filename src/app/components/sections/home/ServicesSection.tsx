@@ -57,8 +57,8 @@ const ImageWrapper = styled.div`
     left: 0;
     right: 0;
     height: 100%;
-    background-color: rgba(0,0,0,.35);
-    }
+    background-color: rgba(0, 0, 0, 0.35);
+  }
   @media ${device.lg} {
     img {
       width: 400px;
@@ -108,30 +108,30 @@ export default function ServicesSection() {
       <SectionBackground $url="/images/sea.png">
         <ContainerLayout>
           <SectionContent>
-            <ImageWrapper>
-              <Link href="/services">
+            <Link href="/services">
+              <ImageWrapper>
                 <Image
                   src="/images/services1.jpg"
                   height={500}
                   width={500}
                   alt="Our services"
                 />
-              </Link>
 
-              <StyledHeading>Ship Repair</StyledHeading>
-            </ImageWrapper>
-            <ImageWrapper>
-              <Link href="/contacts">
+                <StyledHeading>Ship Repair</StyledHeading>
+              </ImageWrapper>
+            </Link>
+            <Link href="/contacts">
+              <ImageWrapper>
                 <Image
                   src="/images/services2.jpg"
                   height={500}
                   width={500}
                   alt="Our services"
                 />
-              </Link>
 
-              <StyledHeading>Shipbuilding</StyledHeading>
-            </ImageWrapper>
+                <StyledHeading>Shipbuilding</StyledHeading>
+              </ImageWrapper>
+            </Link>
           </SectionContent>
         </ContainerLayout>
       </SectionBackground>

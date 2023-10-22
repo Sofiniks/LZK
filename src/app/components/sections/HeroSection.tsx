@@ -12,7 +12,7 @@ const SectionWrapper = styled.section`
     height: 1300px;
   }
   @media ${device.md} {
-    height: 550px;
+    height: 650px;
     margin-bottom: 40px;
   }
 `;
