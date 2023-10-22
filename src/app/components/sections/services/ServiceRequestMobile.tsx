@@ -33,7 +33,6 @@ const ServiceLightBlueBlock = styled(ServiceBlock)`
   p {
     text-transform: uppercase;
     margin-bottom: 30px;
-    
   }
   button {
     background-color: transparent;
@@ -49,32 +48,29 @@ const ServiceLightBlueBlock = styled(ServiceBlock)`
 `;
 
 export default function ServiceRequestMobile() {
-    return (
-        <StyledContainer>
-          <ServiceDarkBlueBlock>
-            <h3>Title</h3>
-            <p>
-              The company is able to build all kind of hulls from small fishing
-              trawlers up to cargo vessels using 2 building workshops for
-              pre-assembling of sections and blocks up to 50 tons.
-            </p>
-            <p>
-              The final assembly including zinc metalizing, painting and
-              outfitting is performed in the dry-dock. The company builds steel
-              hulls including hulls with partial out-fitting as well as delivers
-              turnkey vessels for our Scandinavian and European customers.
-            </p>
-          </ServiceDarkBlueBlock>
-          <ServiceLightBlueBlock>
-            <p>
-              If you require any further information we shall be happy to let
-              you have this, on request.
-            </p>
-            <TransparentLink text="CTA" href="/contacts?contactForm=true"/>
-          </ServiceLightBlueBlock>
-        </StyledContainer>
-    
-    );
+  return (
+    <StyledContainer>
+      <ServiceDarkBlueBlock>
+        <h3>Title</h3>
+        <p>
+          The company is able to build all kind of hulls from small fishing
+          trawlers up to cargo vessels using 2 building workshops for
+          pre-assembling of sections and blocks up to 50 tons.
+        </p>
+        <p>
+          The final assembly including zinc metalizing, painting and outfitting
+          is performed in the dry-dock. The company builds steel hulls including
+          hulls with partial out-fitting as well as delivers turnkey vessels for
+          our Scandinavian and European customers.
+        </p>
+      </ServiceDarkBlueBlock>
+      <ServiceLightBlueBlock>
+        <p>
+          If you require any further information we shall be happy to let you
+          have this, on request.
+        </p>
+        <TransparentLink text="CTA" href="/contacts?contactForm=true" />
+      </ServiceLightBlueBlock>
+    </StyledContainer>
+  );
 }
-
- 

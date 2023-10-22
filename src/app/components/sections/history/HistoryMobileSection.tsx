@@ -25,23 +25,24 @@ const StyledContainer = styled(ContainerLayout)`
   }
 `;
 const HistoryItem = styled.div`
-    margin-bottom: 60px;
-    max-width: 240px;
-    p, img {
-        margin-bottom: 15px;
-    }
+  margin-bottom: 60px;
+  max-width: 240px;
+  p,
+  img {
+    margin-bottom: 15px;
+  }
 `;
 const StyledHeading = styled.div`
-    margin-bottom: 60px;
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
 `;
 
 const StyledYear = styled.h3`
-color: rgba(255,255,255,0.5);
-font-size: 32px;
-font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 32px;
+  font-weight: 500;
 `;
 
 export default function HistoryMobileSection() {
@@ -49,7 +50,7 @@ export default function HistoryMobileSection() {
     <SectionWrapper>
       <StyledContainer>
         <StyledHeading>
-            <StyledYear>2023</StyledYear>
+          <StyledYear>2023</StyledYear>
         </StyledHeading>
         <HistoryItem>
           <Image

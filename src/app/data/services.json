@@ -1,76 +1,76 @@
 {
-    "infoCards": [
-{
-    "iconKey": "SafetySertificate",
-    "text": "The company is certified with Quality Management System Standard ISO 9001:2015 and Environmental Management System Standard ISO 14001:2015. Company implements Qualityand Safety Management System (HSEQ). All the works are carried out in accordance with the IACS requirements."
-  },
-  {
-    "iconKey": "Wrench",
-    "text": "The company is able to repair on around 60-70 seagoing vessels per yearas well as perform all kindsof conversions of wide range of vessels such as dry cargo, trawlers, tugboats, tankers, reefers, gas carriers, Ro-Ro vessels and etc."
-  },
-  {
-    "iconKey": "Partnership",
-    "text": "We with proud can inform you, that our main business partners are: Wagenborg Shipping B.V. (Netherlands), AS Wilson Ship Management (Norway), RIX Shipmanagement SIA (Latvia) and so on."
-  },
-  {
-    "iconKey": "ShipDarkBlue",
-    "text": "The company owns 2 dry docks and 1 floating dock (SWL 3500 tons) and 3 repair berths with total length more than 550 mtrs properly equipped with facilities such as electricity, fresh water, gas oxygen, compressed air and shore cranes."
-  }
-    ],
-    "table1": [
-        {
-    "Type": "DRY-DOCK",
-    "No": "NO.1",
-    "Length(M)": "187",
-    "INNER WIDTH(M)": "25",
-    "MAX DRAFT(M)": "8",
-    "CRANES(T)": "2 x 20"
-  },
-  {
-    "Type": "DRY-DOCK",
-    "No": "NO.1",
-    "Length(M)": "220",
-    "INNER WIDTH(M)": "25",
-    "MAX DRAFT(M)": "8",
-    "CRANES(T)": "2 x 20"
-  },
-  {
-    "Type": "FLOATING DOCK",
-    "No": "",
-    "Length(M)": "119",
-    "INNER WIDTH(M)": "19",
-    "MAX DRAFT(M)": "6",
-    "CRANES(T)": "1 x 5"
-  }
-    ],
-    "table2": [
-  {
-    "NAME": "BERTH No.19",
-    "Length(m)": "381.7",
-    "DEPTH(M)": "6.2",
-    "CRANES(T)": "1 x 32"
-  },
-  {
-    "NAME": "BERTH No.19",
-    "Length(m)": "381.7",
-    "DEPTH(M)": "6.2",
-    "CRANES(T)": "1 x 32"
-  },
-  {
-    "NAME": "BERTH No.19",
-    "Length(m)": "381.7",
-    "DEPTH(M)": "6.2",
-    "CRANES(T)": "1 x 32"
-  }
-],
-"tableCards": [
-  {
-    "title": "Title",
-    "text": "The company offers various kinds of anticorrosive treatments of hulls including high pressure washing, sand blasting up to Standard SA 2.5 as well as mechanical treatment and Coating with marine paints of cargo holds, ballast and fuel oil tanks."
-  },
-  {
-    "title": "Title",
-    "text": "The company is experienced in repair of shafts, propellers and rudder systems. The professional team performs building up and mechanical treatment of the shafts up to 16 m length, prefabrication of bronze bushes and renewal shaft seals."
-  }
-] 
+  "infoCards": [
+    {
+      "iconKey": "SafetySertificate",
+      "text": "The company is certified with Quality Management System Standard ISO 9001:2015 and Environmental Management System Standard ISO 14001:2015. Company implements Qualityand Safety Management System (HSEQ). All the works are carried out in accordance with the IACS requirements."
+    },
+    {
+      "iconKey": "Wrench",
+      "text": "The company is able to repair on around 60-70 seagoing vessels per yearas well as perform all kindsof conversions of wide range of vessels such as dry cargo, trawlers, tugboats, tankers, reefers, gas carriers, Ro-Ro vessels and etc."
+    },
+    {
+      "iconKey": "Partnership",
+      "text": "We with proud can inform you, that our main business partners are: Wagenborg Shipping B.V. (Netherlands), AS Wilson Ship Management (Norway), RIX Shipmanagement SIA (Latvia) and so on."
+    },
+    {
+      "iconKey": "ShipDarkBlue",
+      "text": "The company owns 2 dry docks and 1 floating dock (SWL 3500 tons) and 3 repair berths with total length more than 550 mtrs properly equipped with facilities such as electricity, fresh water, gas oxygen, compressed air and shore cranes."
+    }
+  ],
+  "table1": [
+    {
+      "Type": "DRY-DOCK",
+      "No": "NO.1",
+      "Length(M)": "187",
+      "INNER WIDTH(M)": "25",
+      "MAX DRAFT(M)": "8",
+      "CRANES(T)": "2 x 20"
+    },
+    {
+      "Type": "DRY-DOCK",
+      "No": "NO.1",
+      "Length(M)": "220",
+      "INNER WIDTH(M)": "25",
+      "MAX DRAFT(M)": "8",
+      "CRANES(T)": "2 x 20"
+    },
+    {
+      "Type": "FLOATING DOCK",
+      "No": "",
+      "Length(M)": "119",
+      "INNER WIDTH(M)": "19",
+      "MAX DRAFT(M)": "6",
+      "CRANES(T)": "1 x 5"
+    }
+  ],
+  "table2": [
+    {
+      "NAME": "BERTH No.19",
+      "Length(m)": "381.7",
+      "DEPTH(M)": "6.2",
+      "CRANES(T)": "1 x 32"
+    },
+    {
+      "NAME": "BERTH No.19",
+      "Length(m)": "381.7",
+      "DEPTH(M)": "6.2",
+      "CRANES(T)": "1 x 32"
+    },
+    {
+      "NAME": "BERTH No.19",
+      "Length(m)": "381.7",
+      "DEPTH(M)": "6.2",
+      "CRANES(T)": "1 x 32"
+    }
+  ],
+  "tableCards": [
+    {
+      "title": "Title",
+      "text": "The company offers various kinds of anticorrosive treatments of hulls including high pressure washing, sand blasting up to Standard SA 2.5 as well as mechanical treatment and Coating with marine paints of cargo holds, ballast and fuel oil tanks."
+    },
+    {
+      "title": "Title",
+      "text": "The company is experienced in repair of shafts, propellers and rudder systems. The professional team performs building up and mechanical treatment of the shafts up to 16 m length, prefabrication of bronze bushes and renewal shaft seals."
+    }
+  ]
 }

@@ -49,8 +49,8 @@ const ServiceList = styled.ul`
   }
 `;
 const ServiceListDark = styled(ServiceList)`
-background-color: #0b1f31;
-margin-bottom: 20px;
+  background-color: #0b1f31;
+  margin-bottom: 20px;
 `;
 const ServiceListLight = styled(ServiceList)`
   background-color: #314a61;

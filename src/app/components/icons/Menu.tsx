@@ -12,4 +12,3 @@ const Menu = () => (
   </svg>
 );
 export default Menu;
-

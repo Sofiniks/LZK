@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import getIconComponent from '../../icons/IconMapper';
 import ContainerLayout from '../../layouts/ContainerLayout';
 import { device } from '@/theme/breakpoints';
-import data from '../../../data/services.json'
+import data from '../../../data/services.json';
 
 const SectionWrapper = styled.div`
   margin-bottom: 70px;

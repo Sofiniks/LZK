@@ -1,7 +1,7 @@
-import Partnership from "./Partnership";
-import SafetySertificate from "./SafetySertificate";
-import ShipDarkBlue from "./ShipDarkBlue";
-import Wrench from "./Wrench";
+import Partnership from './Partnership';
+import SafetySertificate from './SafetySertificate';
+import ShipDarkBlue from './ShipDarkBlue';
+import Wrench from './Wrench';
 type IconComponentMap = {
   [key: string]: React.ComponentType;
 };
@@ -10,7 +10,7 @@ const componentMap: IconComponentMap = {
   Partnership,
   SafetySertificate,
   ShipDarkBlue,
-  Wrench
+  Wrench,
 };
 
 function getIconComponent(iconKey: string): React.ReactElement | null {

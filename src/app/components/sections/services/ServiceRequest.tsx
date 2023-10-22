@@ -38,7 +38,7 @@ const StyledContainer = styled(ContainerLayout)`
 
 const SectionDark = styled.div`
   background-color: #0b1f31;
-  width: 50%; 
+  width: 50%;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -63,7 +63,7 @@ const SectionDark = styled.div`
 
 const SectionLight = styled.div`
   background-color: #314a61;
-  width: 50%; 
+  width: 50%;
   position: absolute;
   top: 0;
   bottom: 0;

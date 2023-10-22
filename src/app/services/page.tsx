@@ -6,7 +6,7 @@ import ServicesList from '../components/sections/services/ServicesList';
 import ServicesRequest from '../components/sections/services/ServiceRequest';
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: 'Services',
   description: 'LZK',
 };
 

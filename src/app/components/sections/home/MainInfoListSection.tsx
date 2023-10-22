@@ -6,10 +6,10 @@ import ShipGreyGradient from '../../icons/ShipGreyGradient';
 import infoData from '../../../data/aboutUs.json';
 
 const StyledSection = styled.section`
-margin-bottom: 90px;
-@media ${device.md} {
-  margin-bottom: 60px;
-}
+  margin-bottom: 90px;
+  @media ${device.md} {
+    margin-bottom: 60px;
+  }
 `;
 const StyledHeading = styled.h2`
   text-transform: uppercase;

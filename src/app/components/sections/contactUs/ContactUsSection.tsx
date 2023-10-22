@@ -26,7 +26,7 @@ const StyledContainer = styled(ContainerLayout)`
   }
 `;
 const StyledTabletContainer = styled(TabletContainer)`
-width: 100%;
+  width: 100%;
 `;
 const TextBlock = styled.div`
   @media ${device.lg} {
@@ -109,9 +109,10 @@ const StyledForm = styled.form`
   }
 `;
 const ContactInfoBlock = styled.div`
-@media ${device.md}{
-  margin-bottom: 50px;
-}`;
+  @media ${device.md} {
+    margin-bottom: 50px;
+  }
+`;
 const ContactInfoItem = styled.div`
   margin-bottom: 30px;
   &:last-of-type {

@@ -13,9 +13,9 @@ const merriweather_sans = Merriweather_Sans({
 
 export const metadata: Metadata = {
   title: {
-      default: 'LZK',
-      template: '%s | LZK',
-    },
+    default: 'LZK',
+    template: '%s | LZK',
+  },
   description: 'LZK',
 };
 

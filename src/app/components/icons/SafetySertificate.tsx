@@ -27,4 +27,3 @@ const SafetySertificate = () => (
 );
 
 export default SafetySertificate;
-

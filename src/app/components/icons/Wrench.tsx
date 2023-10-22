@@ -26,4 +26,3 @@ const Wrench = () => (
   </svg>
 );
 export default Wrench;
-

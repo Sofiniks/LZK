@@ -52,12 +52,14 @@ const SectionContent = styled.div`
       margin-bottom: 32px;
     }
   }
- 
 `;
-export default function HeroSection({title}: {title: string}) {
+export default function HeroSection({ title }: { title: string }) {
   return (
     <SectionWrapper>
-      <SectionBackground $url="/images/hero.png" $urlMobile="/images/mobile_hero.png">
+      <SectionBackground
+        $url="/images/hero.png"
+        $urlMobile="/images/mobile_hero.png"
+      >
         <SectionContent>
           <h1>{title}</h1>
         </SectionContent>
