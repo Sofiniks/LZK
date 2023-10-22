@@ -117,7 +117,7 @@ export default function ServicesSection() {
                   alt="Our services"
                 />
 
-                <StyledHeading>Ship Repair</StyledHeading>
+                <StyledHeading>Services</StyledHeading>
               </ImageWrapper>
             </Link>
             <Link href="/contacts">
@@ -129,7 +129,7 @@ export default function ServicesSection() {
                   alt="Our services"
                 />
 
-                <StyledHeading>Shipbuilding</StyledHeading>
+                <StyledHeading>Contacts</StyledHeading>
               </ImageWrapper>
             </Link>
           </SectionContent>

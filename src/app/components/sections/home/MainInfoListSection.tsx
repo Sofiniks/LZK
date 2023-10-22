@@ -42,7 +42,7 @@ const StyledCard = styled.li`
   position: relative;
   z-index: 1;
   h4 {
-    font-size: 24px;
+    font-size: 20px;
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 10px;
@@ -74,7 +74,7 @@ export default function MainInfoListSection() {
   return (
     <StyledSection>
       <ContainerLayout>
-        <StyledHeading>Text</StyledHeading>
+        <StyledHeading>Discover Our Shipyard</StyledHeading>
         <StyledList>
           {infoData.mainInfoCards.map((item) => {
             return (

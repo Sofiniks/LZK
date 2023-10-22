@@ -124,7 +124,7 @@ export default function ServicesRequest() {
           <SectionDark />
           <StyledContainer>
             <ServiceLightBlueBlock>
-              <h3>Title</h3>
+              <h3>Comprehensive Hull Building Services</h3>
               <p>
                 The company is able to build all kind of hulls from small
                 fishing trawlers up to cargo vessels using 2 building workshops
@@ -143,7 +143,10 @@ export default function ServicesRequest() {
                 If you require any further information we shall be happy to let
                 you have this, on request.
               </p>
-              <TransparentLink href="/contacts?contactForm=true" text="Contact us" />
+              <TransparentLink
+                href="/contacts?contactForm=true"
+                text="Contact us"
+              />
             </ServiceDarkBlueBlock>
           </StyledContainer>
         </SectionWrapper>

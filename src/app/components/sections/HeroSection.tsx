@@ -43,6 +43,7 @@ const SectionContent = styled.div`
   h1 {
     margin-bottom: 90px;
     font-size: 64px;
+    text-transform: uppercase;
     @media ${device.md} {
       font-size: 48px;
       margin-bottom: 40px;

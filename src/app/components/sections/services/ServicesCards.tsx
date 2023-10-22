@@ -47,6 +47,9 @@ const CardItem = styled.li`
     height: 350px;
     padding-bottom: 40px;
     border-bottom: 1px solid #fff;
+    @media ${device.md} {
+      height: 280px;
+    }
     @media ${device.sm} {
       height: 250px;
       padding-bottom: 20px;

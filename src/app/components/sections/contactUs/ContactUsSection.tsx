@@ -54,6 +54,7 @@ const ImageWrapper = styled.div`
     img {
       width: 450px;
       height: auto;
+      max-height: 270px;
     }
   }
 `;
@@ -215,7 +216,7 @@ export default function ContactUs() {
               </ImageWrapper>
               <ImageWrapper>
                 <Image
-                  src="/images/contact_us_2.png"
+                  src="/images/contact_us_2.jpg"
                   width={630}
                   height={345}
                   alt="airfoto"

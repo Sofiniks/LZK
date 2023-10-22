@@ -1,20 +1,20 @@
 {
   "mainInfoCards": [
     {
-      "title": "Staff",
-      "desc": "Lorem ipsum dolor sit. Nostrum assumenda eos nisi culpa quod placeat suscipit laborum harum vero! Dicta."
+      "title": "Our Heritage",
+      "desc": "Liepaja Northern Shipyard was founded in 1900 initially as ship-repair workshops of military port of Libau (Liepaja) and is one of the oldest shipyards in the region of the Baltic Sea."
     },
     {
-      "title": "Staff1",
-      "desc": "Lorem ipsum dolor sit. Nostrum assumenda eos nisi culpa quod placeat suscipit laborum harum vero! Dicta."
+      "title": "Maritime Expertise",
+      "desc": "It has been one of the main repair bases for the Navy fleet at the Baltic Sea for many years. Our Shipyard has wide experience in repairs of the various types of vessels."
     },
     {
-      "title": "Staff2",
-      "desc": "Lorem ipsum dolor sit. Nostrum assumenda eos nisi culpa quod placeat suscipit laborum harum vero! Dicta."
+      "title": "Quality",
+      "desc": "Shipyard’s Quality Management System and Factory Production Control (FPC) has been approved by \"Russian Maritime Register of Shipping\" as complying to standard  Execution of steel structure and aluminium structures."
     },
     {
-      "title": "Staff3",
-      "desc": "Lorem ipsum dolor sit. Nostrum assumenda eos nisi culpa quod placeat suscipit laborum harum vero! Dicta."
+      "title": "Prime Location",
+      "desc": "Liepaja is nonfreezing port situated on the eastern coast of the Baltic Sea, having very favourable geographical arrangement.  It is close to the Western Europe and has the advanced transportation network."
     }
   ]
 }

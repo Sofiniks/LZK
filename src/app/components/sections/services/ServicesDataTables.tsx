@@ -88,7 +88,7 @@ const CardItem = styled.li`
   padding: 45px 90px;
   h3 {
     margin-bottom: 20px;
-    font-size: 32px;
+    font-size: 20px;
   }
   @media ${device.lg} {
     padding: 40px 60px;
