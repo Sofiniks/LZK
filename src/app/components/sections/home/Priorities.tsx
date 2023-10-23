@@ -23,7 +23,7 @@ const StyledHeading = styled.div`
       font-size: 20px;
     }
     @media ${device.sm} {
-        max-width: 100%;
+      max-width: 100%;
     }
   }
 `;
@@ -67,7 +67,7 @@ const SectionLight = styled.div`
   }
   @media ${device.lg} {
     &:before {
-        display: none;
+      display: none;
     }
   }
 `;
@@ -80,6 +80,9 @@ const PriorityList = styled.ul`
 const PriorityItem = styled.li`
   margin-bottom: 25px;
   list-style-type: circle;
+  &:first-of-type {
+    list-style-type: none;
+  }
   &:last-of-type {
     margin-bottom: 0;
   }
@@ -102,21 +105,17 @@ const PriorityListDarkBlue = styled.div`
 export default function Priorities() {
   return (
     <>
-      <ContainerLayout>
-        <StyledHeading>
-          <h3>
-            We are a reliable partner for shipowners in the fields of ship
-            repair, shipbuilding, and metal structure fabrication. Our values:
-          </h3>
-        </StyledHeading>
-      </ContainerLayout>
-
       <DesktopContainer>
         <SectionWrapper>
           <SectionDark />
           <SectionLight />
           <StyledContainer>
             <PriorityListDarkBlue>
+              <PriorityItem>
+                We are a reliable partner for shipowners in the fields of ship
+                repair, shipbuilding, and metal structure fabrication. Our
+                values:
+              </PriorityItem>
               <PriorityItem>Our employees are our greatest asset</PriorityItem>
               <PriorityItem>
                 Compliance with international and national legislation and other
@@ -124,9 +123,6 @@ export default function Priorities() {
               </PriorityItem>
               <PriorityItem>
                 Environmentally responsible and resource-efficient practices
-              </PriorityItem>
-              <PriorityItem>
-                Striving to reduce environmental pollution
               </PriorityItem>
               <PriorityItem>
                 Embracing new technologies and developing enterprise management

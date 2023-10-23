@@ -18,12 +18,12 @@ const PriorityList = styled.ul`
   height: 350px;
   
   @media ${device.sm} {
-    min-height: 450px;
+    min-height: 500px;
     height: max-content;
     padding-bottom: 30px;
   }
   @media (max-width: 360px) {
-    min-height: 560px;
+    min-height: 600px;
   }
   &:before {
     content: '';
@@ -39,10 +39,10 @@ const PriorityList = styled.ul`
     transform: translate(0, 0);
     @media ${device.sm} {
       border-right: 30px solid #11304d;
-      border-top: 450px solid transparent;
+      border-top: 500px solid transparent;
     }
     @media (max-width: 375px) {
-      border-top: 560px solid transparent;
+      border-top: 600px solid transparent;
     }
   }
 `;
@@ -71,6 +71,9 @@ const PriorityListLight = styled(PriorityList)`
 const PriorityItem = styled.li`
   margin-bottom: 25px;
   list-style-type: circle;
+  &:first-of-type {
+    list-style-type: none;
+  }
   &:last-of-type {
     margin-bottom: 0;
   }
@@ -81,6 +84,10 @@ export default function PrioritiesMobile() {
     <SectionWrapper>
       <StyledContainer>
         <PriorityListDark>
+          <PriorityItem>
+            We are a reliable partner for shipowners in the fields of ship
+            repair, shipbuilding, and metal structure fabrication. Our values:
+          </PriorityItem>
           <PriorityItem>Our employees are our greatest asset</PriorityItem>
           <PriorityItem>
             Compliance with international and national legislation and other
@@ -88,9 +95,6 @@ export default function PrioritiesMobile() {
           </PriorityItem>
           <PriorityItem>
             Environmentally responsible and resource-efficient practices
-          </PriorityItem>
-          <PriorityItem>
-            Striving to reduce environmental pollution
           </PriorityItem>
           <PriorityItem>
             Embracing new technologies and developing enterprise management
