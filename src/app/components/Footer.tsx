@@ -162,7 +162,7 @@ export default function Footer() {
               </EmailBlock>
             </ContactItem>
             <ContactItem>
-              <h4>SHIP AGENT ALVINA Ship Agency Ltd.</h4>
+              <h4>SHIP AGENT ALVINA Ship Agency Ltd</h4>
               <EmailBlock>
                 <EmailIcon />
                 <p>alvinaship@gmail.com</p>
@@ -215,7 +215,7 @@ export default function Footer() {
                 </EmailBlock>
               </ContactItem>
               <ContactItem>
-                <h4>SHIP AGENT ALVINA Ship Agency Ltd.</h4>
+                <h4>SHIP AGENT ALVINA Ship Agency Ltd</h4>
                 <EmailBlock>
                   <EmailIcon />
                   <p>alvinaship@gmail.com</p>
