@@ -19,8 +19,8 @@ const Partnership = () => (
         y2="51.2672"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stopColor="#040525" />
-        <stop offset="1" stopColor="#040525" stopOpacity="0" />
+        <stop stopColor="#ffffff" />
+        <stop offset="1" stopColor="#ffffff" stopOpacity="0" />
       </linearGradient>
     </defs>
   </svg>

@@ -23,7 +23,7 @@ const ShipDarkBlue = () => (
         y2="49.8812"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stopColor="#040525" />
+        <stop stopColor="#ffffff" />
         <stop offset="1" stopOpacity="0" />
       </linearGradient>
       <clipPath id="clip0_370_197">

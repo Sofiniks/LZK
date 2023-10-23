@@ -81,10 +81,12 @@ select:focus {
 
 textarea {
   font-family: var(--font-merriweather_sans);
+  color: #fff;
 }
 
 input {
   font-family: var(--font-merriweather_sans);
+  color: #fff;
 }
 h1 {
   font-size: 64px;

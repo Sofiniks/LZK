@@ -19,8 +19,8 @@ const Wrench = () => (
         y2="54.6242"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stopColor="#040525" />
-        <stop offset="1" stopColor="#050727" stopOpacity="0" />
+        <stop stopColor="#ffffff" />
+        <stop offset="1" stopColor="#ffffff" stopOpacity="0" />
       </linearGradient>
     </defs>
   </svg>

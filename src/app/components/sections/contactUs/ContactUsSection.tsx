@@ -1,7 +1,8 @@
 'use client';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
-import { useEffect } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import { scroller, Element } from 'react-scroll';
 import { useSearchParams } from 'next/navigation';
 import ContainerLayout from '../../layouts/ContainerLayout';
@@ -10,6 +11,7 @@ import LocationIcon from '../../icons/LocationIcon';
 import EmailIcon from '../../icons/EmailIcon';
 import { Phone } from '../../icons/Phone';
 import contactsData from '../../../data/contacts.json';
+import FormModal from './FormModal';
 
 const StyledSection = styled.section`
   margin-bottom: 120px;
@@ -175,6 +177,13 @@ const ContactsList = () => {
 export default function ContactUs() {
   const params = useSearchParams();
   const contactsParam = params.get('contactForm');
+  const [state, handleSubmit] = useForm('mqkvnpoe');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
 
   useEffect(() => {
     if (contactsParam === 'true') {
@@ -186,6 +195,21 @@ export default function ContactUs() {
       });
     }
   }, [contactsParam]);
+
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+  const handleFormSubmit = async (e: any) => {
+    e.preventDefault();
+    handleSubmit(formData);
+    setFormData({
+      name: '',
+      email: '',
+      message: '',
+    });
+    setIsModalOpen(true);
+  };
   return (
     <Element name="contactForm" className="element">
       <StyledSection>
@@ -193,11 +217,61 @@ export default function ContactUs() {
           <TextBlock>
             <FormWrapper>
               <StyledSubtitle>Feel free to contact us any time</StyledSubtitle>
-              <StyledForm>
-                <input type="text" placeholder="Email" />
-                <input type="text" placeholder="Name" />
-                <textarea placeholder="Text" cols={30} rows={10}></textarea>
-                <button type="submit">Submit</button>
+              <StyledForm onSubmit={handleFormSubmit} id="form">
+                <input
+                  id="name"
+                  type="name"
+                  name="name"
+                  placeholder="Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
+                <ValidationError
+                  prefix="Name"
+                  field="name"
+                  errors={state.errors}
+                />
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+                <ValidationError
+                  prefix="Email"
+                  field="email"
+                  errors={state.errors}
+                />
+     
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={3}
+                  placeholder="Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                />
+                <ValidationError
+                  prefix="Message"
+                  field="message"
+                  errors={state.errors}
+                />
+
+                <button type="submit" disabled={state.submitting}>
+                  Submit
+                </button>
+
+                {state.succeeded && (
+                  <FormModal
+                    isOpen={isModalOpen}
+                    setIsOpen={setIsModalOpen}
+                  />
+                )}
               </StyledForm>
             </FormWrapper>
             <ContactInfoBlock>

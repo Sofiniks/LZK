@@ -39,7 +39,7 @@ const CardList = styled.ul`
   }
 `;
 const CardItem = styled.li`
-  background-color: #314a61;
+  background-color: #0a2135;
   width: 100%;
   min-height: 460px;
   padding: 20px 50px 60px 25px;
