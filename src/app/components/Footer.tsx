@@ -185,6 +185,15 @@ export default function Footer() {
       <TabletContainer>
         <StyledContainer>
           <NavTop>
+            <Navbar>
+              <NavList>
+                {menuLinks.map((item) => (
+                  <NavItem key={item.title}>
+                    <Link href={item.href}>{item.title}</Link>
+                  </NavItem>
+                ))}
+              </NavList>
+            </Navbar>
             <LogoWrapper>
               <Link href="/">
                 <Image
@@ -195,15 +204,6 @@ export default function Footer() {
                 />
               </Link>
             </LogoWrapper>
-            <Navbar>
-              <NavList>
-                {menuLinks.map((item) => (
-                  <NavItem key={item.title}>
-                    <Link href={item.href}>{item.title}</Link>
-                  </NavItem>
-                ))}
-              </NavList>
-            </Navbar>
           </NavTop>
           <NavBottom>
             <ContactList>

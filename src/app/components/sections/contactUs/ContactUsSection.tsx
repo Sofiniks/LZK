@@ -246,7 +246,7 @@ export default function ContactUs() {
                   field="email"
                   errors={state.errors}
                 />
-     
+
                 <textarea
                   id="message"
                   name="message"
@@ -267,10 +267,7 @@ export default function ContactUs() {
                 </button>
 
                 {state.succeeded && (
-                  <FormModal
-                    isOpen={isModalOpen}
-                    setIsOpen={setIsModalOpen}
-                  />
+                  <FormModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
                 )}
               </StyledForm>
             </FormWrapper>

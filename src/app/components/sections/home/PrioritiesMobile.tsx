@@ -16,7 +16,7 @@ const PriorityList = styled.ul`
   padding: 40px;
   position: relative;
   height: 350px;
-  
+
   @media ${device.sm} {
     min-height: 500px;
     height: max-content;

@@ -22,7 +22,7 @@ const StyledContainer = styled(ContainerLayout)`
   &:before {
     content: '';
     width: 1px;
-    height: calc(100% - 330px);
+    height: calc(100% - 520px);
     color: white;
     background-color: #fff;
     position: absolute;
@@ -76,14 +76,7 @@ const HistoryItem = styled.div`
   }
   &:last-of-type {
     &:before {
-      width: 80px;
-      top: unset;
-      bottom: 50%;
-      z-index: -1;
-    }
-    svg {
-      top: unset;
-      bottom: 50%;
+      width: 60%;
     }
   }
   @media ${device.sm} {

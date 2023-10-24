@@ -29,7 +29,6 @@ const ModalWrapper = styled.div`
   h3 {
     font-size: 24px;
   }
-  
 `;
 const ButtonWrapper = styled.div`
   width: 100%;
@@ -75,19 +74,19 @@ const FormModal = ({
   const handleModalClose = () => {
     setIsOpen(false);
   };
-   useEffect(() => {
-     // Set the body's overflow property directly
-     if (isOpen) {
-       document.body.style.overflow = 'hidden';
-     } else {
-       document.body.style.overflow = 'auto';
-     }
+  useEffect(() => {
+    // Set the body's overflow property directly
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
 
-     // Cleanup the effect when the component unmounts
-     return () => {
-       document.body.style.overflow = 'auto';
-     };
-   }, [isOpen]);
+    // Cleanup the effect when the component unmounts
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isOpen]);
 
   return (
     <Overlay $isHidden={!isOpen} onClick={handleModalClose}>

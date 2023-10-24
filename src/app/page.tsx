@@ -9,7 +9,7 @@ export default function Home() {
     <main>
       <HeroSection title="About Us" />
       <MainInfoListSection />
-      <Priorities/>
+      <Priorities />
       <ServicesSection />
       <LocationSection />
     </main>
