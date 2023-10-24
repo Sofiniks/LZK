@@ -17,10 +17,11 @@ const HeadingWrapper = styled.div`
   }
   @media ${device.sm} {
     h3 {
-      max-width: 290px;
+      /* max-width: 290px; */
       font-size: 20px;
       font-weight: 500;
       text-align: left;
+      max-width: 80%;
     }
   }
 `;

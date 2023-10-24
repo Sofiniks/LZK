@@ -67,7 +67,8 @@ const SectionLight = styled.div`
   }
   @media ${device.lg} {
     &:before {
-      display: none;
+      /* display: none; */
+      border-top: 438px solid transparent;
     }
   }
 `;

@@ -22,7 +22,7 @@ const StyledContainer = styled(ContainerLayout)`
   &:before {
     content: '';
     width: 1px;
-    height: calc(100% - 520px);
+    height: calc(100% - 570px);
     color: white;
     background-color: #fff;
     position: absolute;

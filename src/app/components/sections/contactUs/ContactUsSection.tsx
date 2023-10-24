@@ -16,7 +16,7 @@ import FormModal from './FormModal';
 const StyledSection = styled.section`
   margin-bottom: 120px;
   @media ${device.md} {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 `;
 const StyledContainer = styled(ContainerLayout)`
@@ -59,6 +59,20 @@ const ImageWrapper = styled.div`
       max-height: 270px;
     }
   }
+  @media ${device.md} {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 70%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+  @media ${device.sm} {
+    img {
+      width: 100%;
+    }
+  }
 `;
 const GoogleMapWrapper = styled.div`
   width: 630px;
@@ -69,6 +83,7 @@ const GoogleMapWrapper = styled.div`
   }
   @media ${device.md} {
     width: 100%;
+    margin-bottom: 30px;
   }
 `;
 const FormWrapper = styled.div`
@@ -310,6 +325,14 @@ export default function ContactUs() {
                 src="https://maps.google.com/maps?width=100%25&amp;height=340&amp;hl=en&amp;q=44D,%20Generala%20Baloza%20Str.%20Liepaja,%20Latvia+(LZK)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
               ></iframe>
             </GoogleMapWrapper>
+            <ImageWrapper>
+              <Image
+                src="/images/contact_us_2.jpg"
+                width={630}
+                height={345}
+                alt="airfoto"
+              />
+            </ImageWrapper>
           </StyledTabletContainer>
         </StyledContainer>
       </StyledSection>

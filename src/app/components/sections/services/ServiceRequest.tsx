@@ -1,12 +1,13 @@
 'use client';
 import styled from 'styled-components';
+import Image from 'next/image';
 import ContainerLayout from '../../layouts/ContainerLayout';
 import { DesktopContainer, TabletContainer, device } from '@/theme/breakpoints';
 import ServiceRequestMobile from './ServiceRequestMobile';
 import TransparentLink from '../../links/links';
 
 const SectionWrapper = styled.div`
-  margin-bottom: 110px;
+  margin-bottom: 60px;
   position: relative;
   min-height: 400px;
 `;
@@ -25,7 +26,7 @@ const HeadingWrapper = styled.div`
     font-size: 48px;
     text-transform: uppercase;
     @media ${device.sm} {
-      font-size: 32px;
+      font-size: 28px;
     }
   }
 `;
@@ -56,7 +57,7 @@ const SectionDark = styled.div`
     border-top: 400px solid transparent;
     border-left: 100px solid #314a61;
     @media ${device.lg} {
-      display: none;
+      border-top: 468px solid transparent;
     }
   }
 `;
@@ -112,6 +113,24 @@ const ServiceLightBlueBlock = styled(ServiceBlock)`
   }
 `;
 
+const ImageWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 60px;
+  img {
+    width: 700px;
+    height: auto;
+    object-fit: contain;
+    @media ${device.md} {
+      width: 650px;
+    }
+    @media (max-width: 600px) {
+      width: 90%;
+    }
+  }
+`;
+
 export default function ServicesRequest() {
   return (
     <>
@@ -150,9 +169,25 @@ export default function ServicesRequest() {
             </ServiceDarkBlueBlock>
           </StyledContainer>
         </SectionWrapper>
+        <ImageWrapper>
+          <Image
+            src="/images/servicesPage.jpg"
+            width={600}
+            height={134}
+            alt="services"
+          />
+        </ImageWrapper>
       </DesktopContainer>
       <TabletContainer>
         <ServiceRequestMobile />
+        <ImageWrapper>
+          <Image
+            src="/images/servicesPage.jpg"
+            width={600}
+            height={134}
+            alt="services"
+          />
+        </ImageWrapper>
       </TabletContainer>
     </>
   );

@@ -2,6 +2,7 @@
 import styled from 'styled-components';
 import ContainerLayout from '../../layouts/ContainerLayout';
 import TransparentLink from '../../links/links';
+import { device } from '@/theme/breakpoints';
 
 const StyledContainer = styled(ContainerLayout)`
   display: flex;
@@ -29,10 +30,25 @@ const ServiceDarkBlueBlock = styled(ServiceBlock)`
 `;
 const ServiceLightBlueBlock = styled(ServiceBlock)`
   background-color: #1b3349;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  @media ${device.sm} {
+    padding: 20px;
+  }
 
   p {
     text-transform: uppercase;
     margin-bottom: 30px;
+    @media ${device.md} {
+      max-width: 70%;
+      text-align: center;
+    }
+    @media ${device.sm} {
+      max-width: 100%;
+    }
   }
   button {
     background-color: transparent;

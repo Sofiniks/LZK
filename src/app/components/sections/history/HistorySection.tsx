@@ -19,7 +19,7 @@ const StyledContainer = styled(ContainerLayout)`
     content: '';
     position: absolute;
     width: 1px;
-    height: calc(100% - 304px);
+    height: calc(100% - 320px);
     top: 0;
     bottom: 0;
     right: 50%;
