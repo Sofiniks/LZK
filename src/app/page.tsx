@@ -1,8 +1,8 @@
 import HeroSection from './components/sections/HeroSection';
 import MainInfoListSection from './components/sections/home/MainInfoListSection';
 import LocationSection from './components/sections/home/LocationSection';
-import ServicesSection from './components/sections/home/ServicesSection';
-import Priorities from './components/sections/home/Priorities';
+import Navigation from './components/sections/home/Navigation';
+import Priorities from './components/sections/home/Priorities/PrioritiesDesktop';
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
       <HeroSection title="About Us" />
       <MainInfoListSection />
       <Priorities />
-      <ServicesSection />
+      <Navigation />
       <LocationSection />
     </main>
   );

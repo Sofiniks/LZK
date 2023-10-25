@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import ContainerLayout from '../../layouts/ContainerLayout';
+import ContainerLayout from '../../../layouts/ContainerLayout';
 import { device } from '@/theme/breakpoints';
 
 const listData1 = [
@@ -27,10 +27,24 @@ const StyledContainer = styled(ContainerLayout)`
   flex-direction: column;
 `;
 
+const StyledHeading = styled.h3`
+  font-size: 24px;
+  margin-bottom: 30px;
+  @media ${device.md} {
+    font-size: 20px;
+  }
+`;
+
 const ServiceList = styled.ul`
   padding: 40px;
   position: relative;
   height: 400px;
+  @media ${device.md} {
+    height: 330px;
+  }
+  @media ${device.sm} {
+    height: 430px;
+  }
   &:before {
     content: '';
     background-color: transparent;
@@ -43,8 +57,12 @@ const ServiceList = styled.ul`
     border-top: 400px solid transparent;
     border-right: 50px solid #11304d;
     transform: translate(0, 0);
+    @media ${device.md} {
+      border-top: 330px solid transparent;
+    }
     @media ${device.sm} {
       border-right: 30px solid #11304d;
+      border-top: 430px solid transparent;
     }
   }
 `;
@@ -65,19 +83,26 @@ const ServiceItem = styled.li`
 
 export default function ServicesListMobile() {
   return (
-    <SectionWrapper>
-      <StyledContainer>
-        <ServiceListDark>
-          {listData1.map((item, index) => {
-            return <ServiceItem key={index}>{item}</ServiceItem>;
-          })}
-        </ServiceListDark>
-        <ServiceListLight>
-          {listData2.map((item, index) => {
-            return <ServiceItem key={index}>{item}</ServiceItem>;
-          })}
-        </ServiceListLight>
-      </StyledContainer>
-    </SectionWrapper>
+    <>
+      <ContainerLayout>
+        <StyledHeading>
+          The company offers the following services:{' '}
+        </StyledHeading>
+      </ContainerLayout>
+      <SectionWrapper>
+        <StyledContainer>
+          <ServiceListDark>
+            {listData1.map((item, index) => {
+              return <ServiceItem key={index}>{item}</ServiceItem>;
+            })}
+          </ServiceListDark>
+          <ServiceListLight>
+            {listData2.map((item, index) => {
+              return <ServiceItem key={index}>{item}</ServiceItem>;
+            })}
+          </ServiceListLight>
+        </StyledContainer>
+      </SectionWrapper>
+    </>
   );
 }

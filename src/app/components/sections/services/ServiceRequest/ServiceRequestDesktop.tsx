@@ -1,10 +1,10 @@
 'use client';
 import styled from 'styled-components';
 import Image from 'next/image';
-import ContainerLayout from '../../layouts/ContainerLayout';
+import ContainerLayout from '../../../layouts/ContainerLayout';
 import { DesktopContainer, TabletContainer, device } from '@/theme/breakpoints';
 import ServiceRequestMobile from './ServiceRequestMobile';
-import TransparentLink from '../../links/links';
+import TransparentLink from '../../../links/links';
 
 const SectionWrapper = styled.div`
   margin-bottom: 60px;
@@ -131,13 +131,12 @@ const ImageWrapper = styled.div`
   }
 `;
 
-export default function ServicesRequest() {
+export default function ServicesRequestDesktop() {
   return (
     <>
       <HeadingWrapper>
         <h2>Shipbuilding facilities</h2>
       </HeadingWrapper>
-      <DesktopContainer>
         <SectionWrapper>
           <SectionLight />
           <SectionDark />
@@ -177,18 +176,6 @@ export default function ServicesRequest() {
             alt="services"
           />
         </ImageWrapper>
-      </DesktopContainer>
-      <TabletContainer>
-        <ServiceRequestMobile />
-        <ImageWrapper>
-          <Image
-            src="/images/servicesPage.jpg"
-            width={600}
-            height={134}
-            alt="services"
-          />
-        </ImageWrapper>
-      </TabletContainer>
     </>
   );
 }

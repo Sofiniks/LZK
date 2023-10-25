@@ -1,17 +1,16 @@
 'use client';
-import HistoryDesktopSection from './HistoryDesktopSection';
-import HistoryMobileSection from './HistoryMobileSection';
+import ServicesListDesktop from './ServicesListDesktop';
+import ServicesListMobile from './ServicesListMobile';
 import { DesktopContainer, TabletContainer } from '@/theme/breakpoints';
-
 
 export default function HistorySection() {
   return (
     <>
       <DesktopContainer>
-        <HistoryDesktopSection/>
+        <ServicesListDesktop />
       </DesktopContainer>
       <TabletContainer>
-        <HistoryMobileSection />
+        <ServicesListMobile />
       </TabletContainer>
     </>
   );

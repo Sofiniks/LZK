@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import ContainerLayout from '../../layouts/ContainerLayout';
+import ContainerLayout from '../../../layouts/ContainerLayout';
 import { device } from '@/theme/breakpoints';
 
 const SectionWrapper = styled.div`

@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import ContainerLayout from '../../layouts/ContainerLayout';
+import ContainerLayout from '../../../layouts/ContainerLayout';
 import ServicesListMobile from './ServicesListMobile';
 import { DesktopContainer, TabletContainer, device } from '@/theme/breakpoints';
 
@@ -91,7 +91,7 @@ const ServiceListDarkBlue = styled(ServiceList)`
   padding-left: 0;
 `;
 
-export default function ServicesList() {
+export default function ServicesListDesktop() {
   return (
     <>
       <ContainerLayout>
@@ -99,8 +99,6 @@ export default function ServicesList() {
           The company offers the following services:{' '}
         </StyledHeading>
       </ContainerLayout>
-
-      <DesktopContainer>
         <SectionWrapper>
           <SectionDark />
           <SectionLight />
@@ -117,10 +115,6 @@ export default function ServicesList() {
             </ServiceListLightBlue>
           </StyledContainer>
         </SectionWrapper>
-      </DesktopContainer>
-      <TabletContainer>
-        <ServicesListMobile />
-      </TabletContainer>
     </>
   );
 }

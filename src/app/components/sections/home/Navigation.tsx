@@ -102,7 +102,7 @@ const StyledHeading = styled.h4`
   }
 `;
 
-export default function ServicesSection() {
+export default function Navigation() {
   return (
     <StyledSection>
       <SectionBackground $url="/images/sea.png">

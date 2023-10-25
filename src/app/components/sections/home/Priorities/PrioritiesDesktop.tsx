@@ -1,6 +1,6 @@
 'use client';
 import styled from 'styled-components';
-import ContainerLayout from '../../layouts/ContainerLayout';
+import ContainerLayout from '../../../layouts/ContainerLayout';
 import PrioritiesMobile from './PrioritiesMobile';
 import { DesktopContainer, TabletContainer, device } from '@/theme/breakpoints';
 
@@ -8,24 +8,6 @@ const SectionWrapper = styled.div`
   margin-bottom: 110px;
   position: relative;
   min-height: 380px;
-`;
-
-const StyledHeading = styled.div`
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  h3 {
-    text-align: center;
-    max-width: 70%;
-    font-size: 24px;
-    @media ${device.md} {
-      font-size: 20px;
-    }
-    @media ${device.sm} {
-      max-width: 100%;
-    }
-  }
 `;
 
 const StyledContainer = styled(ContainerLayout)`
@@ -103,10 +85,9 @@ const PriorityListDarkBlue = styled.div`
   padding-left: 0;
 `;
 
-export default function Priorities() {
+export default function PrioritiesDesktop() {
   return (
     <>
-      <DesktopContainer>
         <SectionWrapper>
           <SectionDark />
           <SectionLight />
@@ -148,10 +129,6 @@ export default function Priorities() {
             </PriorityListLightBlue>
           </StyledContainer>
         </SectionWrapper>
-      </DesktopContainer>
-      <TabletContainer>
-        <PrioritiesMobile />
-      </TabletContainer>
     </>
   );
 }
