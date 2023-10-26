@@ -4,6 +4,7 @@ import { device } from '@/theme/breakpoints';
 import ContainerLayout from '../../layouts/ContainerLayout';
 import ShipGreyGradient from '../../icons/ShipGreyGradient';
 import infoData from '../../../data/aboutUs.json';
+import { MainInfoCard } from '@/types/dataTypes';
 
 const StyledSection = styled.section`
   margin-bottom: 90px;
@@ -76,7 +77,7 @@ export default function MainInfoListSection() {
       <ContainerLayout>
         <StyledHeading>Discover Our Shipyard</StyledHeading>
         <StyledList>
-          {infoData.mainInfoCards.map((item) => {
+          {infoData.mainInfoCards.map((item: MainInfoCard) => {
             return (
               <StyledCard key={item.title}>
                 <StyledIconWrapper>

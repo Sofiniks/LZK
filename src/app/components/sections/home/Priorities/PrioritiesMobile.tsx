@@ -15,35 +15,11 @@ const StyledContainer = styled(ContainerLayout)`
 const PriorityList = styled.ul`
   padding: 40px;
   position: relative;
-  height: 350px;
-
+  min-height: 330px;
+  background: linear-gradient(-80deg, #11304d 10%, transparent 0%);
   @media ${device.sm} {
-    min-height: 500px;
-    height: max-content;
-    padding-bottom: 30px;
-  }
-  @media (max-width: 360px) {
-    min-height: 600px;
-  }
-  &:before {
-    content: '';
-    background-color: transparent;
-    height: 0;
-    width: 0;
-    position: absolute;
-    z-index: 0;
-    right: 0;
-    top: 0;
-    border-top: 350px solid transparent;
-    border-right: 50px solid #11304d;
-    transform: translate(0, 0);
-    @media ${device.sm} {
-      border-right: 30px solid #11304d;
-      border-top: 500px solid transparent;
-    }
-    @media (max-width: 375px) {
-      border-top: 600px solid transparent;
-    }
+    min-height: 400px;
+    background: linear-gradient(-86deg, #11304d 10%, transparent 0%);
   }
 `;
 const PriorityListDark = styled(PriorityList)`

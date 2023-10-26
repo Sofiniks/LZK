@@ -4,6 +4,7 @@ import getIconComponent from '../../icons/IconMapper';
 import ContainerLayout from '../../layouts/ContainerLayout';
 import { device } from '@/theme/breakpoints';
 import data from '../../../data/services.json';
+import { InfoCard } from '@/types/dataTypes';
 
 const SectionWrapper = styled.div`
   margin-bottom: 70px;
@@ -81,7 +82,7 @@ export default function ServicesCards() {
           </h3>
         </HeadingWrapper>
         <CardList>
-          {data.infoCards.map((item) => {
+          {data.infoCards.map((item: InfoCard) => {
             return (
               <CardItem key={item.iconKey}>
                 <IconWrapper>{getIconComponent(item.iconKey)}</IconWrapper>

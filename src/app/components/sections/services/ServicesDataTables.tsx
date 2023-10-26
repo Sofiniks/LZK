@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import ContainerLayout from '../../layouts/ContainerLayout';
 import { device } from '@/theme/breakpoints';
 import data from '@/app/data/services.json';
+import { Table1Item, Table2Item, TableCard } from '@/types/dataTypes';
 
 const SectionWrapper = styled.div`
   margin-bottom: 70px;
@@ -17,7 +18,6 @@ const HeadingWrapper = styled.div`
   }
   @media ${device.sm} {
     h3 {
-      /* max-width: 290px; */
       font-size: 20px;
       font-weight: 500;
       text-align: left;
@@ -99,7 +99,13 @@ const CardItem = styled.li`
   }
 `;
 
-function DataTable({ titles, data }: { titles: string[]; data: any[] }) {
+function DataTable({
+  titles,
+  data,
+}: {
+  titles: string[];
+  data: Table1Item[] | Table2Item[];
+}) {
   return (
     <StyledTable>
       <thead>
@@ -113,7 +119,7 @@ function DataTable({ titles, data }: { titles: string[]; data: any[] }) {
         {data.map((item, idx) => (
           <tr key={idx}>
             {titles.map((title, index) => (
-              <td key={index}>{item[title]}</td>
+              <td key={index}>{(item as any)[title]}</td>
             ))}
           </tr>
         ))}
@@ -134,7 +140,7 @@ export default function ServicesDataTables() {
           <DataTable titles={Object.keys(data.table2[0])} data={data.table2} />
         </TableSection>
         <CardsSection>
-          {data.tableCards.map((item, index) => {
+          {data.tableCards.map((item: TableCard, index) => {
             return (
               <CardItem key={index}>
                 <h3>{item.title}</h3>

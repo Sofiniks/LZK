@@ -2,8 +2,7 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 import ContainerLayout from '../../../layouts/ContainerLayout';
-import { DesktopContainer, TabletContainer, device } from '@/theme/breakpoints';
-import ServiceRequestMobile from './ServiceRequestMobile';
+import { device } from '@/theme/breakpoints';
 import TransparentLink from '../../../links/links';
 
 const SectionWrapper = styled.div`
@@ -17,59 +16,39 @@ const HeadingWrapper = styled.div`
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   margin-bottom: 70px;
-  @media ${device.md} {
-    margin-bottom: 30px;
-    padding: 40px 0;
-  }
   h2 {
     text-align: center;
     font-size: 48px;
     text-transform: uppercase;
-    @media ${device.sm} {
-      font-size: 28px;
-    }
   }
+`;
+
+const DiagonalDividerBackground = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    80deg,
+    #0b1f31,
+    #0b1f31 50%,
+    #314a61 50%,
+    #314a61
+  );
+  /* background: linear-gradient(
+    -80deg,
+    #314a61,
+    #314a61 50%,
+    #0b1f31 50%,
+    #0b1f31
+  ); */
 `;
 
 const StyledContainer = styled(ContainerLayout)`
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
-`;
-
-const SectionDark = styled.div`
-  background-color: #0b1f31;
-  width: 50%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  &:before {
-    content: '';
-    background-color: transparent;
-    height: 0;
-    width: 0;
-    position: absolute;
-    z-index: 0;
-    left: 0;
-    top: 0;
-    border-top: 400px solid transparent;
-    border-left: 100px solid #314a61;
-    @media ${device.lg} {
-      border-top: 468px solid transparent;
-    }
-  }
-`;
-
-const SectionLight = styled.div`
-  background-color: #314a61;
-  width: 50%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
 `;
 
 const ServiceBlock = styled.div`
@@ -122,12 +101,6 @@ const ImageWrapper = styled.div`
     width: 700px;
     height: auto;
     object-fit: contain;
-    @media ${device.md} {
-      width: 650px;
-    }
-    @media (max-width: 600px) {
-      width: 90%;
-    }
   }
 `;
 
@@ -138,8 +111,7 @@ export default function ServicesRequestDesktop() {
         <h2>Shipbuilding facilities</h2>
       </HeadingWrapper>
       <SectionWrapper>
-        <SectionLight />
-        <SectionDark />
+        <DiagonalDividerBackground />
         <StyledContainer>
           <ServiceLightBlueBlock>
             <h3>Comprehensive Hull Building Services</h3>

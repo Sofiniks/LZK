@@ -12,6 +12,7 @@ import EmailIcon from '../../icons/EmailIcon';
 import { Phone } from '../../icons/Phone';
 import contactsData from '../../../data/contacts.json';
 import FormModal from './FormModal';
+import { CompanyContacts } from '@/types/dataTypes';
 
 const StyledSection = styled.section`
   margin-bottom: 120px;
@@ -161,7 +162,7 @@ const InfoWithIcon = styled.div`
 `;
 
 const ContactsList = () => {
-  return contactsData.map((item, index) => {
+  return contactsData.map((item: CompanyContacts, index: number) => {
     return (
       <ContactInfoItem key={index}>
         <h4>{item.title}</h4>

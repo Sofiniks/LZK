@@ -17,14 +17,10 @@ const ServiceBlock = styled.div`
 `;
 
 const HeadingWrapper = styled.div`
-  padding: 50px 0;
+  padding: 40px 0;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  margin-bottom: 70px;
-  @media ${device.md} {
-    margin-bottom: 30px;
-    padding: 40px 0;
-  }
+  margin-bottom: 30px;
   h2 {
     text-align: center;
     font-size: 48px;
@@ -62,10 +58,9 @@ const ServiceLightBlueBlock = styled(ServiceBlock)`
   p {
     text-transform: uppercase;
     margin-bottom: 30px;
-    @media ${device.md} {
-      max-width: 70%;
-      text-align: center;
-    }
+    max-width: 70%;
+    text-align: center;
+
     @media ${device.sm} {
       max-width: 100%;
     }
@@ -89,12 +84,10 @@ const ImageWrapper = styled.div`
   justify-content: center;
   margin-bottom: 60px;
   img {
-    width: 700px;
+    width: 650px;
     height: auto;
     object-fit: contain;
-    @media ${device.md} {
-      width: 650px;
-    }
+
     @media (max-width: 600px) {
       width: 90%;
     }

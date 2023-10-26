@@ -16,7 +16,8 @@ export const metadata: Metadata = {
     default: 'LZK',
     template: '%s | LZK',
   },
-  description: 'LZK',
+  description:
+    'Liepaja Northern Shipyard: Honoring a rich heritage in maritime excellence. Your trusted partner for quality ship repairs and conversions.',
 };
 
 export default function RootLayout({

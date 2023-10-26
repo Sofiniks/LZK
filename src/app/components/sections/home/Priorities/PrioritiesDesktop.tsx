@@ -1,8 +1,6 @@
 'use client';
 import styled from 'styled-components';
 import ContainerLayout from '../../../layouts/ContainerLayout';
-import PrioritiesMobile from './PrioritiesMobile';
-import { DesktopContainer, TabletContainer, device } from '@/theme/breakpoints';
 
 const SectionWrapper = styled.div`
   margin-bottom: 110px;
@@ -16,43 +14,19 @@ const StyledContainer = styled(ContainerLayout)`
   justify-content: space-between;
 `;
 
-const SectionDark = styled.div`
-  background-color: #0b1f31;
-  width: 50%;
+const DiagonalDividerBackground = styled.div`
   position: absolute;
-  top: 0;
   bottom: 0;
   left: 0;
-  z-index: -1;
-`;
-
-const SectionLight = styled.div`
-  background-color: #314a61;
-  width: 50%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  &:before {
-    content: '';
-    background-color: transparent;
-    height: 0;
-    width: 0;
-    position: absolute;
-    z-index: 0;
-    left: 0;
-    top: 0;
-    border-top: 380px solid transparent;
-    border-right: 100px solid #314a61;
-    transform: translate(-100%, 0);
-  }
-  @media ${device.lg} {
-    &:before {
-      /* display: none; */
-      border-top: 438px solid transparent;
-    }
-  }
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    -80deg,
+    #314a61,
+    #314a61 50%,
+    #0b1f31 50%,
+    #0b1f31
+  );
 `;
 
 const PriorityList = styled.ul`
@@ -89,8 +63,7 @@ export default function PrioritiesDesktop() {
   return (
     <>
       <SectionWrapper>
-        <SectionDark />
-        <SectionLight />
+        <DiagonalDividerBackground />
         <StyledContainer>
           <PriorityListDarkBlue>
             <PriorityItem>
