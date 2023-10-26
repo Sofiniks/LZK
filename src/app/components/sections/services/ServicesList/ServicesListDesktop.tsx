@@ -1,23 +1,8 @@
 'use client';
 import styled from 'styled-components';
 import ContainerLayout from '../../../layouts/ContainerLayout';
-import ServicesListMobile from './ServicesListMobile';
-import { DesktopContainer, TabletContainer, device } from '@/theme/breakpoints';
-
-const listData1 = [
-  'Installation of the BWTS',
-  'Repair of various piping systems, including non-ferrous pipes, hot and cold galvanized',
-  'Overhauling, repair of valves',
-  'Repair of all types of generators and engines',
-  'Repair of all kind of deck machinery',
-];
-const listData2 = [
-  'Repair of electro installation; ship’s automatics',
-  'Rewinding of motors',
-  'Repair of marine boilers, compressors and various kind of pumps',
-  'Repair of various kind of hatch covers; hydraulic systems',
-  'Repair of turbochargers; governors',
-];
+import { device } from '@/theme/breakpoints';
+import servicesListData from '../../../../data/services.json';
 
 const SectionWrapper = styled.div`
   margin-bottom: 110px;
@@ -99,22 +84,22 @@ export default function ServicesListDesktop() {
           The company offers the following services:{' '}
         </StyledHeading>
       </ContainerLayout>
-        <SectionWrapper>
-          <SectionDark />
-          <SectionLight />
-          <StyledContainer>
-            <ServiceListDarkBlue>
-              {listData1.map((item, index) => {
-                return <ServiceItem key={index}>{item}</ServiceItem>;
-              })}
-            </ServiceListDarkBlue>
-            <ServiceListLightBlue>
-              {listData2.map((item, index) => {
-                return <ServiceItem key={index}>{item}</ServiceItem>;
-              })}
-            </ServiceListLightBlue>
-          </StyledContainer>
-        </SectionWrapper>
+      <SectionWrapper>
+        <SectionDark />
+        <SectionLight />
+        <StyledContainer>
+          <ServiceListDarkBlue>
+            {servicesListData.servicesLists.list1.map((item, index) => {
+              return <ServiceItem key={index}>{item}</ServiceItem>;
+            })}
+          </ServiceListDarkBlue>
+          <ServiceListLightBlue>
+            {servicesListData.servicesLists.list2.map((item, index) => {
+              return <ServiceItem key={index}>{item}</ServiceItem>;
+            })}
+          </ServiceListLightBlue>
+        </StyledContainer>
+      </SectionWrapper>
     </>
   );
 }

@@ -2,21 +2,7 @@
 import styled from 'styled-components';
 import ContainerLayout from '../../../layouts/ContainerLayout';
 import { device } from '@/theme/breakpoints';
-
-const listData1 = [
-  'Installation of the BWTS',
-  'Repair of various piping systems, including non-ferrous pipes, hot and cold galvanized',
-  'Overhauling, repair of valves',
-  'Repair of all types of generators and engines',
-  'Repair of all kind of deck machinery',
-];
-const listData2 = [
-  'Repair of electro installation; ship’s automatics',
-  'Rewinding of motors',
-  'Repair of marine boilers, compressors and various kind of pumps',
-  'Repair of various kind of hatch covers; hydraulic systems',
-  'Repair of turbochargers; governors',
-];
+import servicesListData from '../../../../data/services.json';
 
 const SectionWrapper = styled.div`
   margin-bottom: 30px;
@@ -92,12 +78,12 @@ export default function ServicesListMobile() {
       <SectionWrapper>
         <StyledContainer>
           <ServiceListDark>
-            {listData1.map((item, index) => {
+            {servicesListData.servicesLists.list1.map((item, index) => {
               return <ServiceItem key={index}>{item}</ServiceItem>;
             })}
           </ServiceListDark>
           <ServiceListLight>
-            {listData2.map((item, index) => {
+            {servicesListData.servicesLists.list2.map((item, index) => {
               return <ServiceItem key={index}>{item}</ServiceItem>;
             })}
           </ServiceListLight>

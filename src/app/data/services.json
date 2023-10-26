@@ -72,5 +72,21 @@
       "title": "Shafts, Propellers, and Rudder Repairs",
       "text": "The company is experienced in repair of shafts, propellers and rudder systems. The professional team performs building up and mechanical treatment of the shafts up to 16 m length, prefabrication of bronze bushes and renewal shaft seals."
     }
-  ]
+  ],
+  "servicesLists": {
+    "list1": [
+      "Installation of the BWTS",
+      "Repair of various piping systems, including non-ferrous pipes, hot and cold galvanized",
+      "Overhauling, repair of valves",
+      "Repair of all types of generators and engines",
+      "Repair of all kind of deck machinery"
+    ],
+    "list2": [
+      "Repair of electro installation; ship’s automatics",
+      "Rewinding of motors",
+      "Repair of marine boilers, compressors and various kind of pumps",
+      "Repair of various kind of hatch covers; hydraulic systems",
+      "Repair of turbochargers; governors"
+    ]
+  }
 }

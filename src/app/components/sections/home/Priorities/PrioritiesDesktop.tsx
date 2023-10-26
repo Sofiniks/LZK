@@ -88,47 +88,46 @@ const PriorityListDarkBlue = styled.div`
 export default function PrioritiesDesktop() {
   return (
     <>
-        <SectionWrapper>
-          <SectionDark />
-          <SectionLight />
-          <StyledContainer>
-            <PriorityListDarkBlue>
-              <PriorityItem>
-                We are a reliable partner for shipowners in the fields of ship
-                repair, shipbuilding, and metal structure fabrication. Our
-                values:
-              </PriorityItem>
-              <PriorityItem>Our employees are our greatest asset</PriorityItem>
-              <PriorityItem>
-                Compliance with international and national legislation and other
-                mandatory requirements
-              </PriorityItem>
-              <PriorityItem>
-                Environmentally responsible and resource-efficient practices
-              </PriorityItem>
-              <PriorityItem>
-                Embracing new technologies and developing enterprise management
-                systems
-              </PriorityItem>
-            </PriorityListDarkBlue>
-            <PriorityListLightBlue>
-              <p>
-                Our development goal is to become a leading company in the field
-                of ship repair, shipbuilding, and metal structure fabrication on
-                the eastern coast of the Baltic Sea.
-              </p>
-              <p>
-                Our skilled staff has good experience in repair of different
-                type of vessels such as general cargo, reefers, tugs, trawlers,
-                tankers and Ro-Ro vessels.
-              </p>
-              <p>
-                Liepaja Northern Shipyard provides to their Customers a 24 hour
-                service 7 days a week for qualitative repair maintenance.
-              </p>
-            </PriorityListLightBlue>
-          </StyledContainer>
-        </SectionWrapper>
+      <SectionWrapper>
+        <SectionDark />
+        <SectionLight />
+        <StyledContainer>
+          <PriorityListDarkBlue>
+            <PriorityItem>
+              We are a reliable partner for shipowners in the fields of ship
+              repair, shipbuilding, and metal structure fabrication. Our values:
+            </PriorityItem>
+            <PriorityItem>Our employees are our greatest asset</PriorityItem>
+            <PriorityItem>
+              Compliance with international and national legislation and other
+              mandatory requirements
+            </PriorityItem>
+            <PriorityItem>
+              Environmentally responsible and resource-efficient practices
+            </PriorityItem>
+            <PriorityItem>
+              Embracing new technologies and developing enterprise management
+              systems
+            </PriorityItem>
+          </PriorityListDarkBlue>
+          <PriorityListLightBlue>
+            <p>
+              Our development goal is to become a leading company in the field
+              of ship repair, shipbuilding, and metal structure fabrication on
+              the eastern coast of the Baltic Sea.
+            </p>
+            <p>
+              Our skilled staff has good experience in repair of different type
+              of vessels such as general cargo, reefers, tugs, trawlers, tankers
+              and Ro-Ro vessels.
+            </p>
+            <p>
+              Liepaja Northern Shipyard provides to their Customers a 24 hour
+              service 7 days a week for qualitative repair maintenance.
+            </p>
+          </PriorityListLightBlue>
+        </StyledContainer>
+      </SectionWrapper>
     </>
   );
 }

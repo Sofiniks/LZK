@@ -137,45 +137,44 @@ export default function ServicesRequestDesktop() {
       <HeadingWrapper>
         <h2>Shipbuilding facilities</h2>
       </HeadingWrapper>
-        <SectionWrapper>
-          <SectionLight />
-          <SectionDark />
-          <StyledContainer>
-            <ServiceLightBlueBlock>
-              <h3>Comprehensive Hull Building Services</h3>
-              <p>
-                The company is able to build all kind of hulls from small
-                fishing trawlers up to cargo vessels using 2 building workshops
-                for pre-assembling of sections and blocks up to 50 tons.
-              </p>
-              <p>
-                The final assembly including zinc metalizing, painting and
-                outfitting is performed in the dry-dock. The company builds
-                steel hulls including hulls with partial out-fitting as well as
-                delivers turnkey vessels for our Scandinavian and European
-                customers.
-              </p>
-            </ServiceLightBlueBlock>
-            <ServiceDarkBlueBlock>
-              <p>
-                If you require any further information we shall be happy to let
-                you have this, on request.
-              </p>
-              <TransparentLink
-                href="/contacts?contactForm=true"
-                text="Contact us"
-              />
-            </ServiceDarkBlueBlock>
-          </StyledContainer>
-        </SectionWrapper>
-        <ImageWrapper>
-          <Image
-            src="/images/servicesPage.jpg"
-            width={600}
-            height={134}
-            alt="services"
-          />
-        </ImageWrapper>
+      <SectionWrapper>
+        <SectionLight />
+        <SectionDark />
+        <StyledContainer>
+          <ServiceLightBlueBlock>
+            <h3>Comprehensive Hull Building Services</h3>
+            <p>
+              The company is able to build all kind of hulls from small fishing
+              trawlers up to cargo vessels using 2 building workshops for
+              pre-assembling of sections and blocks up to 50 tons.
+            </p>
+            <p>
+              The final assembly including zinc metalizing, painting and
+              outfitting is performed in the dry-dock. The company builds steel
+              hulls including hulls with partial out-fitting as well as delivers
+              turnkey vessels for our Scandinavian and European customers.
+            </p>
+          </ServiceLightBlueBlock>
+          <ServiceDarkBlueBlock>
+            <p>
+              If you require any further information we shall be happy to let
+              you have this, on request.
+            </p>
+            <TransparentLink
+              href="/contacts?contactForm=true"
+              text="Contact us"
+            />
+          </ServiceDarkBlueBlock>
+        </StyledContainer>
+      </SectionWrapper>
+      <ImageWrapper>
+        <Image
+          src="/images/servicesPage.jpg"
+          width={600}
+          height={134}
+          alt="services"
+        />
+      </ImageWrapper>
     </>
   );
 }
