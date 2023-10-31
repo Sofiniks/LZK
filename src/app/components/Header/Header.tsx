@@ -13,7 +13,7 @@ const StyledHeader = styled.header`
   background: linear-gradient(
     61deg,
     rgba(255, 255, 255, 0) -15.08%,
-    rgba(0, 0, 0, 0.4) 71.7%
+    rgba(0, 0, 0, 0.2) 71.7%
   );
   /* background: rgba(0,0,0,0.3); */
   padding: 25px 0;
