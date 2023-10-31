@@ -96,7 +96,7 @@ const ContactList = styled.ul`
   }
 `;
 const ContactItem = styled.li`
-  margin-bottom: 35px;
+  margin-bottom: 25px;
   @media ${device.md} {
     margin-bottom: 20px;
   }
@@ -104,7 +104,7 @@ const ContactItem = styled.li`
     margin-bottom: 0;
   }
   h4 {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     @media ${device.md} {
       margin-bottom: 10px;
     }
@@ -168,6 +168,13 @@ export default function Footer() {
                 <p>alvinaship@gmail.com</p>
               </EmailBlock>
             </ContactItem>
+            <ContactItem>
+              <h4>Tosmare Shipping Agency, SIA</h4>
+              <EmailBlock>
+                <EmailIcon />
+                <p>tsa123@inbox.lv</p>
+              </EmailBlock>
+            </ContactItem>
           </ContactList>
           <CopyrightBlock>
             <CertificationWrapper>
@@ -219,6 +226,13 @@ export default function Footer() {
                 <EmailBlock>
                   <EmailIcon />
                   <p>alvinaship@gmail.com</p>
+                </EmailBlock>
+              </ContactItem>
+              <ContactItem>
+                <h4>Tosmare Shipping Agency, SIA</h4>
+                <EmailBlock>
+                  <EmailIcon />
+                  <p>tsa123@inbox.lv</p>
                 </EmailBlock>
               </ContactItem>
             </ContactList>

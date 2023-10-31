@@ -1,5 +1,6 @@
 'use client';
 import styled from 'styled-components';
+import Image from 'next/image';
 import ContainerLayout from '../../../layouts/ContainerLayout';
 import servicesListData from '../../../../data/services.json';
 
@@ -48,6 +49,18 @@ const ServiceItem = styled.li`
   }
 `;
 
+const ImageWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 60px;
+  img {
+    width: 700px;
+    height: auto;
+    object-fit: contain;
+  }
+`;
+
 export default function ServicesListDesktop() {
   return (
     <>
@@ -71,6 +84,14 @@ export default function ServicesListDesktop() {
           </ServiceList>
         </StyledContainer>
       </SectionWrapper>
+      <ImageWrapper>
+        <Image
+          src="/images/shipWithSun.png"
+          width={600}
+          height={134}
+          alt="services"
+        />
+      </ImageWrapper>
     </>
   );
 }

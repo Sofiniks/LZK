@@ -12,9 +12,10 @@ const StyledHeader = styled.header`
   height: 150px;
   background: linear-gradient(
     61deg,
-    rgba(0, 0, 0, 0.7) -75.08%,
-    rgba(255, 255, 255, 0) 51.7%
+    rgba(255, 255, 255, 0) -15.08%,
+    rgba(0, 0, 0, 0.4) 71.7%
   );
+  /* background: rgba(0,0,0,0.3); */
   padding: 25px 0;
   position: absolute;
   top: 0;

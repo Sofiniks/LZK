@@ -35,6 +35,7 @@ const SectionContent = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
   @media ${device.sm} {
     justify-content: flex-start;
     padding-top: 200px;
@@ -44,11 +45,15 @@ const SectionContent = styled.div`
     margin-bottom: 90px;
     font-size: 64px;
     text-transform: uppercase;
+    position: absolute;
+    bottom: 25%;
+
     @media ${device.md} {
       font-size: 48px;
       margin-bottom: 40px;
     }
     @media ${device.sm} {
+      bottom: 37%;
       font-size: 36px;
       margin-bottom: 32px;
     }
@@ -58,8 +63,8 @@ export default function HeroSection({ title }: { title: string }) {
   return (
     <SectionWrapper>
       <SectionBackground
-        $url="/images/hero.png"
-        $urlMobile="/images/heroMobile.png"
+        $url="/images/heroFinalDesktop.png"
+        $urlMobile="/images/heroFinalMobile.png"
       >
         <SectionContent>
           <h1>{title}</h1>
