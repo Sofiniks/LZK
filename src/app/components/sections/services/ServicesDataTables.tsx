@@ -46,6 +46,7 @@ const StyledTable = styled.table`
   border: 1px solid white;
   border-collapse: collapse;
   color: white;
+  
 
   td,
   th {
@@ -69,6 +70,12 @@ const StyledTable = styled.table`
       letter-spacing: 0em;
       text-align: center;
       padding: 5px;
+    }
+  }
+  p {
+    display: block;
+    &:nth-child(2) {
+      margin-top: 3px;
     }
   }
 `;
@@ -118,9 +125,16 @@ function DataTable({
       <tbody>
         {data.map((item, idx) => (
           <tr key={idx}>
-            {titles.map((title, index) => (
-              <td key={index}>{(item as any)[title]}</td>
-            ))}
+            {titles.map((title, index) => {
+              if (title === 'CRANES(T)') {
+                const itemTitle = (item as any)[title].map((arrItem: any, arrIndex: any) => {
+                  return <p key={arrIndex}>{arrItem}</p>
+                })
+                return <td key={index}>{itemTitle}</td>;
+              } else {
+                return <td key={index}>{(item as any)[title]}</td>;
+              }
+            })}
           </tr>
         ))}
       </tbody>

@@ -24,15 +24,15 @@
       "Length(M)": "187",
       "INNER WIDTH(M)": "25",
       "MAX DRAFT(M)": "8",
-      "CRANES(T)": "2 x 20"
+      "CRANES(T)": ["2 x 20"]
     },
     {
       "Type": "DRY-DOCK",
-      "No": "NO.1",
+      "No": "NO.2",
       "Length(M)": "220",
-      "INNER WIDTH(M)": "25",
+      "INNER WIDTH(M)": "26",
       "MAX DRAFT(M)": "8",
-      "CRANES(T)": "2 x 20"
+      "CRANES(T)": ["2 x 32", "1 x 16"]
     },
     {
       "Type": "FLOATING DOCK",
@@ -40,7 +40,7 @@
       "Length(M)": "119",
       "INNER WIDTH(M)": "19",
       "MAX DRAFT(M)": "6",
-      "CRANES(T)": "1 x 5"
+      "CRANES(T)": ["1 x 5", "1 x 40"]
     }
   ],
   "table2": [
@@ -48,19 +48,19 @@
       "NAME": "BERTH No.19",
       "Length(m)": "381.7",
       "DEPTH(M)": "6.2",
-      "CRANES(T)": "1 x 32"
+      "CRANES(T)": ["1 x 32"]
     },
     {
-      "NAME": "BERTH No.19",
-      "Length(m)": "381.7",
+      "NAME": "BERTH No.20",
+      "Length(m)": "83.8",
       "DEPTH(M)": "6.2",
-      "CRANES(T)": "1 x 32"
+      "CRANES(T)": ["1 x 20"]
     },
     {
-      "NAME": "BERTH No.19",
-      "Length(m)": "381.7",
+      "NAME": "BERTH No.21",
+      "Length(m)": "103.5",
       "DEPTH(M)": "6.2",
-      "CRANES(T)": "1 x 32"
+      "CRANES(T)": ["1 x 10"]
     }
   ],
   "tableCards": [

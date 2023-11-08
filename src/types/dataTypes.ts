@@ -28,14 +28,14 @@ export interface Table1Item {
   ['Length(M)']: string;
   ['INNER WIDTH(M)']: string;
   ['MAX DRAFT(M)']: string;
-  ['CRANES(T)']: string;
+  ['CRANES(T)']: string[];
 }
 
 export interface Table2Item {
   NAME: string;
   ['Length(m)']: string;
   ['DEPTH(M)']: string;
-  ['CRANES(T)']: string;
+  ['CRANES(T)']: string[];
 }
 
 export interface TableCard {
