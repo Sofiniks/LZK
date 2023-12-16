@@ -313,7 +313,7 @@ export default function ContactUs() {
                 <iframe
                   width="100%"
                   height="100%"
-                  src="https://maps.google.com/maps?width=100%25&amp;height=340&amp;hl=en&amp;q=44D,%20Generala%20Baloza%20Str.%20Liepaja,%20Latvia+(LZK)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                  src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=56.545028832063515,%2021.044497317571423+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                 ></iframe>
               </GoogleMapWrapper>
             </ImagesBlock>
@@ -323,7 +323,7 @@ export default function ContactUs() {
               <iframe
                 width="100%"
                 height="100%"
-                src="https://maps.google.com/maps?width=100%25&amp;height=340&amp;hl=en&amp;q=44D,%20Generala%20Baloza%20Str.%20Liepaja,%20Latvia+(LZK)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=56.545028832063515,%2021.044497317571423+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
               ></iframe>
             </GoogleMapWrapper>
             <ImageWrapper>
